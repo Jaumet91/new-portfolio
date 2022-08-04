@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
 
 import {
   bgMain,
@@ -9,13 +10,15 @@ import {
   headerPic4,
   headerPic5,
   headerPic6,
-  headerPic7
+  headerPic7,
+  figure1,
+  figure2,
+  figure3
 } from '../../assets/images';
 
 export const Hero = () => {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
-  console.log(offsetY);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -46,23 +49,29 @@ export const Hero = () => {
               Developer.
             </span>
           </h1>
-          <a className='scroll' href='#details' data-aos='transform'>
+          <Link
+            className='scroll'
+            to='details'
+            data-aos='transform'
+            smooth={true}
+            offset={50}
+            duration={1000}>
             <div className='scroll__icon'>
               <img className='scroll__pic' src={scroll} alt='scroll' />
             </div>
-            <div className='scroll__text'>Muéstrame más</div>
-          </a>
+            <div className='scroll__text'>Ver más</div>
+          </Link>
         </div>
       </div>
       <div className='header__view' data-aos>
         <div className='header__preview'>
-          <img className='header__pic' src={headerPic6} alt='figura 6' />
+          <img className='header__pic' src={headerPic6} alt='pic 6' />
         </div>
         <div className='header__preview'>
           <img
             className='header__pic'
             src={headerPic1}
-            alt='figura 1'
+            alt='pic 1'
             style={{
               willChange: 'transform',
               transform: `translate3d(0px,${-offsetY * 0.1 - 12}px, 0px)`,
@@ -74,25 +83,78 @@ export const Hero = () => {
           <img
             className='header__pic'
             src={headerPic2}
-            alt='figura 2'
+            alt='pic 2'
             style={{
               willChange: 'transform',
-              transform: 'translate3d(0px, -4px, 0px)',
-              transition: 'transform .05s cubic-bezier(0,0,0,1)'
+              transform: `translate3d(0px,${-offsetY * 0.05 - 4}px, 0px)`,
+              transition: 'transform 0.5s cubic-bezier(0, 0, 0, 1) 0s'
             }}
           />
         </div>
         <div className='header__preview'>
-          <img className='header__pic' src={headerPic3} alt='figura 3' />
+          <img className='header__pic' src={headerPic3} alt='pic 3' />
         </div>
         <div className='header__preview'>
-          <img className='header__pic' src={headerPic4} alt='figura 4' />
+          <img className='header__pic' src={headerPic4} alt='pic 4' />
         </div>
         <div className='header__preview'>
-          <img className='header__pic' src={headerPic5} alt='figura 5' />
+          <img
+            className='header__pic'
+            src={headerPic5}
+            alt='pic 5'
+            style={{
+              willChange: 'transform',
+              transform: `translate3d(0px,${-offsetY * 0.1 - 12}px, 0px)`,
+              transition: 'transform 0.5s cubic-bezier(0, 0, 0, 1) 0s'
+            }}
+          />
         </div>
         <div className='header__preview'>
-          <img className='header__pic' src={headerPic7} alt='figura 7' />
+          <img
+            className='header__pic'
+            src={headerPic7}
+            alt='pic 7'
+            style={{
+              willChange: 'transform',
+              transform: `translate3d(0px,${offsetY * 0.05 - 12}px, 0px)`,
+              transition: 'transform 0.5s cubic-bezier(0, 0, 0, 1) 0s'
+            }}
+          />
+        </div>
+      </div>
+      <div className='header__figures'>
+        <div className='header__figure' data-aos='animation-translate-y'>
+          <img
+            className='header__pic'
+            src={figure1}
+            alt='figura 1'
+            style={{
+              willChange: 'transform',
+              transform: `translate3d(0px,${offsetY * 0.1 + 24}px, 0px)`,
+              transition: 'transform 0.5s cubic-bezier(0, 0, 0, 1) 0s'
+            }}
+          />
+        </div>
+        <div
+          className='header__figure'
+          data-aos='animation-translate-y'
+          data-aos-delay='200'>
+          <img
+            className='header__pic'
+            src={figure2}
+            alt='figura 2'
+            style={{
+              willChange: 'transform',
+              transform: `translate3d(0px,${-offsetY * 0.1 - 12}px, 0px)`,
+              transition: 'transform 0.5s cubic-bezier(0, 0, 0, 1) 0s'
+            }}
+          />
+        </div>
+        <div
+          className='header__figure'
+          data-aos='animation-translate-y'
+          data-aos-delay='400'>
+          <img className='header__pic' src={figure3} alt='figura 3' />
         </div>
       </div>
     </>

@@ -10,6 +10,9 @@ import headerPic4 from './main-pic-4.png';
 import headerPic5 from './main-pic-5.png';
 import headerPic6 from './main-pic-6.png';
 import headerPic7 from './main-pic-7.png';
+import figure1 from './figure-1.png';
+import figure2 from './figure-2.png';
+import figure3 from './figure-3.png';
 
 export {
   logo,
@@ -23,5 +26,8 @@ export {
   headerPic4,
   headerPic5,
   headerPic6,
-  headerPic7
+  headerPic7,
+  figure1,
+  figure2,
+  figure3
 };

@@ -41,7 +41,6 @@ $gray-text: #6b6b6b
   height: 100vh
 
 html
-  scroll-behavior: smooth
   &.no-scroll
     overflow: hidden
 
@@ -165,6 +164,7 @@ select,
 .scroll
   display: inline-flex
   align-items: center
+  cursor: pointer
   font-size: 16px
   line-height: 1.5
   font-weight: 500 
@@ -340,6 +340,64 @@ select,
       width: 27.3%
     +nf
       position: absolute
+  &__figure
+    position: absolute
+    z-index: -3
+    &:first-child
+      top: 152px
+      right: 590px
+      width: 231px
+      +mac
+        right: 520px
+      +d
+        top: 240px
+        right: 466px
+        width: 132px
+      +t
+        top: 140px
+        right: 320px
+      +m
+        top: 110px
+        right: 10%
+    &:nth-child(2)
+      right: 738px
+      bottom: 21.2%
+      width: 213px
+      +mac
+        right: 700px
+      +d
+        right: 541px
+        bottom: 16.3%
+        width: 180px 
+      +t
+        right: 400px
+      +m
+        top: 260px
+        bottom: auto
+        right: -30px
+    &:nth-child(3)
+      right: 627px
+      bottom: 6.2%
+      width: 250px
+      +mac
+        right: 530px
+      +d
+        right: 467px
+        bottom: 4.3%
+        width: 176px
+      +t
+        right: 300px
+        bottom: 3%
+      +m
+        display: none
+  &__bg,
+  &__preview,
+  &__figure
+    font-size: 0 
+    pointer-events: none
+  .scroll
+    +m
+      font-size: 0 
 
 .navbar
   left: 0
@@ -646,4 +704,12 @@ select,
   transition-property: transform, opacity
   &.aos-animate 
     transform: translate(0) rotateX(0deg) skewY(0deg)
+    opacity: 1
+
+[data-aos="animation-translate-y"]
+  transform: translateY(40px)
+  opacity: 0
+  transition-property: transform, opacity
+  &.aos-animate 
+    transform: translateY(0)
     opacity: 1
