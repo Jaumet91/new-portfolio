@@ -37,7 +37,11 @@ $pink: #FFBDBD
 $gray-color: #9F9FA9
 $gray-text: #6b6b6b
 
+.test
+  height: 100vh
+
 html
+  scroll-behavior: smooth
   &.no-scroll
     overflow: hidden
 
@@ -61,6 +65,63 @@ textarea,
 select,
   +f
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6
+  font-weight: 600 
+
+.h1
+  font-size: 68px
+  line-height: (84/72)
+  letter-spacing: -.5px
+  +d
+    font-size: 52px
+    line-height: (72/56)
+    letter-spacing: -.4px 
+  +m
+    font-size: 31px
+    line-height: (56/42)
+    letter-spacing: -.1px
+
+.h2
+  font-size: 56px
+  line-height: (72/56)
+  letter-spacing: -.4px 
+
+.h3
+  font-size: 42px
+  line-height: (56/42)
+  letter-spacing: -.1px
+  +d
+    font-size: 32px
+    line-height: (48/32)
+    letter-spacing: -.15px
+  +m
+    font-size: 20px
+    line-height: (28/20)
+
+.h4
+  font-size: 32px
+  line-height: (48/32)
+  letter-spacing: -.15px
+  +d
+    font-size: 24px
+    line-height: (32/24)
+
+.h5
+  font-size: 24px
+  line-height: (32/24)
+  +d
+    font-size: 20px
+    line-height: (28/20)
+
+.h6
+  font-size: 20px
+  line-height: (28/20)
+
 .center
   max-width: 1334px
   margin: 0 auto
@@ -74,6 +135,66 @@ select,
   min-height: 100vh
   overflow: hidden
   position: relative
+
+.stage
+  position: relative
+  margin-bottom: 24px
+  padding-left: 68px
+  font-size: 20px
+  line-height: 1.4
+  font-weight: 600 
+  color: $purple 
+  +d
+    margin-bottom: 16px
+    font-size: 16px
+  &:before
+    content: ""
+    position: absolute
+    top: 15px
+    left: 0
+    width: 52px
+    height: 2px 
+    background: $purple 
+    +d
+      top: 10px
+  &_pink
+    color: $pink
+    &:before
+      background: $pink
+
+.scroll
+  display: inline-flex
+  align-items: center
+  font-size: 16px
+  line-height: 1.5
+  font-weight: 500 
+  color: $dark 
+  +d
+    font-size: 14px
+  &__icon
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0 
+    width: 80px
+    height: 80px
+    margin-right: 24px
+    border-radius: 50% 
+    background: $wh 
+    box-shadow: 0 5px 20px rgba($dark, .05) 
+    font-size: 0
+    transition: transform .25s 
+    +d
+      width: 56px
+      height: 56px
+      margin-right: 16px
+    +m
+      box-shadow: 0 10px 25px rgba($dark, .1) 
+  &__pic
+    +d
+      width: 16px
+  &:hover &__icon
+    transform: translateY(3px)
 
 .header
   position: relative
@@ -129,37 +250,96 @@ select,
       margin-bottom: 114px
     +m
       margin-bottom: 40px
-      font-size: 32px
       line-height: (48/32)
       letter-spacing: -.15px
     span
       display: block
-
-.stage
-  position: relative
-  margin-bottom: 24px
-  padding-left: 68px
-  font-size: 20px
-  line-height: 1.4
-  font-weight: 600 
-  color: $purple 
-  +d
-    margin-bottom: 16px
-    font-size: 16px
-  &:before
-    content: ""
+  &__view
     position: absolute
-    top: 15px
-    left: 0
-    width: 52px
-    height: 2px 
-    background: $purple 
+    top: 320px
+    right: 0
+    width: 910px
+    z-index: -1
+    +x
+      right: -50px
+    +mac
+      right: -100px
     +d
-      top: 10px
-  &_pink
-    color: $pink
-    &:before
-      background: $pink
+      top: 218px
+      right: -8px
+      width: 660px
+    +t
+      top: 327px
+      right: -56px
+      width: 500px
+    +m
+      position: relative
+      top: auto
+      left: auto
+      right: auto
+      width: 480px
+      margin: 40px 0 0 12%
+    +a
+      margin: 130px 0 0 -63px
+    &[data-aos]
+      .header__preview
+        transform: translateY(40px)
+        opacity: 0
+        transition: all .3s 
+      &.aos-animate
+        .header__preview
+          transform: translateY(0)
+          opacity: 1
+          &:first-child
+            transition-delay: .9s
+          &:nth-child(2)
+            transition-delay: .15s 
+          &:nth-child(3)
+            transition-delay: .3s 
+          &:nth-child(4)
+            transition-delay: .45s 
+          &:nth-child(5)
+            transition-delay: .6s 
+          &:nth-child(6)
+            transition-delay: .75s 
+          &:nth-child(7)
+            transition-delay: 1.05s
+  &__view &__pic,
+  &__figure &__pic
+    width: 100%
+  &__preview
+    &:nth-child(2)
+      left: 43.7%
+      top: -16%
+      z-index: 3
+      width: 17%
+    &:nth-child(3)
+      left: 35.6%
+      top: -14%
+      z-index: 2
+      width: 33.5%
+    &:nth-child(4)
+      left: 19.1%
+      top: 19.9%
+      z-index: 1
+      width: 33.5%
+    &:nth-child(5)
+      right: 14.2%
+      top: 20%
+      z-index: 1
+      width: 25%
+    &:nth-child(6)
+      right: 43.3%
+      top: 35.5%
+      z-index: 3
+      width: 8%
+    &:nth-child(7)
+      right: 2%
+      bottom: 8.4%
+      z-index: 3
+      width: 27.3%
+    +nf
+      position: absolute
 
 .navbar
   left: 0
@@ -457,6 +637,8 @@ select,
       transition-delay: .6s 
     &:nth-child(4) span
       transition-delay: .8s
+
+
 
 [data-aos="transform"]
   transform: rotateX(90deg) skewY(-5deg)

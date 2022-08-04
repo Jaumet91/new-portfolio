@@ -5,12 +5,12 @@ export const data = {
       url: '#about'
     },
     {
-      name: 'Proyectos',
-      url: '#cases'
+      name: 'Trabajo',
+      url: '#work'
     },
     {
-      name: 'Estudios',
-      url: '#studies'
+      name: 'Servicios',
+      url: '#services'
     },
     {
       name: 'Contacto',
