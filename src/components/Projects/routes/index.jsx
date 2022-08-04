@@ -1,1 +1,1 @@
-export * from './ProjectsRoutes'
+export * from './ProjectsRoutes';

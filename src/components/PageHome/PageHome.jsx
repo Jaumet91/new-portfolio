@@ -1,5 +1,5 @@
-import { Details } from '../Details'
+import { Details } from '../Details';
 
 export const PageHome = () => {
-  return <Details />
-}
+  return <Details />;
+};

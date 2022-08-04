@@ -1,6 +1,6 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-import { Home, Project } from '../pages'
+import { Home, Project } from '../pages';
 
 export const Router = () => {
   return (
@@ -12,5 +12,5 @@ export const Router = () => {
         <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
     </>
-  )
-}
+  );
+};

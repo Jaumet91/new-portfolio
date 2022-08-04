@@ -127,15 +127,15 @@ button {
   fill: #4c40f7;
 }
 
-.icon-instagram {
-  width: 1em;
-  height: 1em;
+.icon-github {
+  fill: #9f9fa9;
+}
+
+.icon-linkedin {
   fill: #9f9fa9;
 }
 
 .icon-message {
-  width: 1em;
-  height: 1em;
   fill: #111029;
 }
 
@@ -161,6 +161,42 @@ button {
   width: 1em;
   height: 1em;
   fill: #4c40f7;
+}
+
+html.no-scroll {
+  overflow: hidden;
+}
+
+body {
+  min-width: 275px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.7777777778;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+  color: #111029;
+}
+@media only screen and (max-width: 1279px) {
+  body {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+body.no-scroll {
+  overflow: hidden;
+}
+body .page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+body .header {
+  position: relative;
+}
+body .navbar__link {
+  width: 25px;
+  height: 25px;
+  align-content: center;
 }
 
 /*# sourceMappingURL=app.css.map */

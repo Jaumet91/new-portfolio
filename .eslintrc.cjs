@@ -23,4 +23,4 @@ module.exports = {
     'no-unexpected-multiline': 'error',
     indent: 'off'
   }
-}
+};

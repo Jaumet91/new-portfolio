@@ -1,5 +1,5 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
-import { Case } from '../Case'
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { Case } from '../Case';
 
 export const ProjectsRoutes = () => {
   return (
@@ -10,5 +10,5 @@ export const ProjectsRoutes = () => {
         <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
     </>
-  )
-}
+  );
+};

@@ -1,3 +1,3 @@
 export const Case = () => {
-  return <div>Case</div>
-}
+  return <div>Case</div>;
+};
