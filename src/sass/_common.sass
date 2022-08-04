@@ -112,6 +112,54 @@ select,
     max-width: 1440px
     +d
       max-height: 852px
+  &__wrap
+    max-width: 490px
+    +d
+      max-width: 380px
+    +m
+      max-width: 100% 
+    +a
+      max-width: 230px
+  &__title
+    perspective: 400px
+    // perspective-origin: 50% 50%
+    transform-style: preserve-3d
+    margin-bottom: 181px
+    +d
+      margin-bottom: 114px
+    +m
+      margin-bottom: 40px
+      font-size: 32px
+      line-height: (48/32)
+      letter-spacing: -.15px
+    span
+      display: block
+
+.stage
+  position: relative
+  margin-bottom: 24px
+  padding-left: 68px
+  font-size: 20px
+  line-height: 1.4
+  font-weight: 600 
+  color: $purple 
+  +d
+    margin-bottom: 16px
+    font-size: 16px
+  &:before
+    content: ""
+    position: absolute
+    top: 15px
+    left: 0
+    width: 52px
+    height: 2px 
+    background: $purple 
+    +d
+      top: 10px
+  &_pink
+    color: $pink
+    &:before
+      background: $pink
 
 .navbar
   left: 0
@@ -408,4 +456,12 @@ select,
     &:nth-child(3) span
       transition-delay: .6s 
     &:nth-child(4) span
-      transition-delay: .8s 
+      transition-delay: .8s
+
+[data-aos="transform"]
+  transform: rotateX(90deg) skewY(-5deg)
+  opacity: 0
+  transition-property: transform, opacity
+  &.aos-animate 
+    transform: translate(0) rotateX(0deg) skewY(0deg)
+    opacity: 1
