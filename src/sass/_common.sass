@@ -246,3 +246,105 @@ select,
         transform: translateY(-5px) rotate(-45deg)
         +d
           transform: translateY(-3.5px) rotate(-45deg)
+  &__wrapper
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    z-index: 10
+    background: $wh
+    visibility: hidden
+    opacity: 0
+    transition: all .25s
+    +m
+      display: block
+    +a
+      visibility: visible
+      opacity: 1
+      transform: translateX(100%)
+      background: $wh url('../img/bg-header-mobile.png') no-repeat 100% 150% / 100% auto 
+    &.visible
+      visibility: visible
+      opacity: 1
+      +a
+        transform: translateX(0)
+  &__preview
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    width: 400px 
+    padding: 64px 0 0 68px 
+    background: #1B1B87 
+    overflow: hidden
+    +d
+      width: 300px
+      padding: 46px 0 0 48px
+    +m
+      display: none
+  &__img
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    height: 100%
+    max-height: 100%
+    font-size: 0
+    +t
+      height: 80%
+      max-height: 80%
+  &__img &__pic
+    height: 100%
+    width: auto 
+  &__wrapper &__center
+    align-items: stretch
+    width: 100% 
+    max-width: 1204px
+    padding-left: 418px
+    +d
+      max-width: 100%
+      padding-left: 380px 
+    +t
+      flex-direction: column-reverse
+    +m
+      display: block
+      padding: 120px 32px 30px
+  &__contacts
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    flex-shrink: 0 
+    width: 340px
+    margin-right: auto
+    +d
+      width: 280px
+    +t
+      margin: 120px 0 0 
+    +m
+      display: none
+  &__line
+    display: flex
+    color: $dark 
+    +d
+      font-size: 16px
+      line-height: (28/16)
+    +nl
+      margin-bottom: 24px
+  &__icon
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 24px
+    height: 30px
+    margin-right: 45px
+    font-size: 0
+    +d
+      margin-right: 25px
+      width: 17px
+      height: 28px
+    .icon
+      fill: $purple
