@@ -11,7 +11,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className='navbar' id='navbar'>
+    <div className='navbar'>
       <div className='navbar__center center'>
         <Link to='/' className='navbar__logo'>
           <img className='navbar__pic' src={logo} />
@@ -35,7 +35,7 @@ export const Navbar = () => {
           </a>
         </div>
         <button
-          className='navbar__burger'
+          className={`navbar__burger ${isOpen ? 'active' : ''}`}
           onClick={() => setIsOpen(toggle => !toggle)}></button>
       </div>
 
@@ -71,16 +71,33 @@ export const Navbar = () => {
               <div className='navbar__text'>+34 609 431 585</div>
             </a>
           </div>
-          <ul className='navbar__nav'>
+          <nav className='navbar__nav'>
             {navLinks.map(({ name, url }) => (
-              <li key={name + url} className='navbar__item' id={url}>
-                {name}
-              </li>
+              <a key={name + url} className='navbar__item' href={url}>
+                <span>{name}</span>
+              </a>
             ))}
-          </ul>
-          <div className='navbar__social navbar__social_inner'></div>
+          </nav>
+          <div className='navbar__social navbar__social_inner'>
+            <a
+              className='navbar__link'
+              href='https://www.linkedin.com/in/jaimecortes91/'
+              target='_blank'
+              rel='noreferrer'>
+              <LinkedIn className='icon' height={'17'} width={'17'} />
+              LinkedIn
+            </a>
+            <a
+              className='navbar__link'
+              href='https://github.com/Jaumet91'
+              target='_blank'
+              rel='noreferrer'>
+              <Github className='icon' height={'20'} width={'20'} />
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };

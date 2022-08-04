@@ -9,7 +9,7 @@ export const data = {
       url: '#cases'
     },
     {
-      name: 'Casos prácticos',
+      name: 'Estudios',
       url: '#studies'
     },
     {

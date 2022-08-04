@@ -287,6 +287,32 @@ body.no-scroll {
     display: none;
   }
 }
+.navbar__social_inner {
+  position: absolute;
+  left: calc(50% - 184px);
+  bottom: 82px;
+}
+@media only screen and (max-width: 1279px) {
+  .navbar__social_inner {
+    left: 380px;
+    bottom: 56px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar__social_inner {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .navbar__social_inner {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+  }
+}
 .navbar__social .navbar__link {
   display: flex;
   align-items: center;
@@ -578,6 +604,75 @@ body.no-scroll {
 }
 .navbar__icon .icon {
   fill: #4C40F7;
+}
+.navbar__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -15px;
+}
+.navbar__item {
+  overflow: hidden;
+  font-size: 72px;
+  line-height: 1.1666666667;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+  color: #111029;
+  transition: color 0.25s;
+}
+@media only screen and (max-width: 1279px) {
+  .navbar__item {
+    font-size: 42px;
+    line-height: 1.3333333333;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar__item {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .navbar__item {
+    font-size: 32px;
+  }
+}
+.navbar__item span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.25s;
+  transition-delay: 0.3s;
+}
+.navbar__item:hover {
+  color: #4C40F7;
+}
+.navbar__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 1279px) {
+  .navbar__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+.navbar__wrapper.visible .navbar__item span {
+  transform: translateX(0);
+}
+.navbar__wrapper.visible .navbar__item:first-child span {
+  transition-delay: 0.2s;
+}
+.navbar__wrapper.visible .navbar__item:nth-child(2) span {
+  transition-delay: 0.4s;
+}
+.navbar__wrapper.visible .navbar__item:nth-child(3) span {
+  transition-delay: 0.6s;
+}
+.navbar__wrapper.visible .navbar__item:nth-child(4) span {
+  transition-delay: 0.8s;
 }
 
 /*# sourceMappingURL=app.css.map */

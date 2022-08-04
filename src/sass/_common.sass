@@ -159,6 +159,22 @@ select,
       margin-right: auto
       +m
         display: none
+    &_inner
+      position: absolute
+      left: calc(50% - 184px) 
+      bottom: 82px 
+      +d
+        left: 380px
+        bottom: 56px
+      +m
+        position: relative
+        left: auto
+        bottom: auto
+        margin-top: 20px
+      +a
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 32px
   &__social &__link
     display: flex
     align-items: center
@@ -348,3 +364,48 @@ select,
       height: 28px
     .icon
       fill: $purple
+  &__nav
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-top: -15px
+  &__item
+    overflow: hidden
+    font-size: 72px
+    line-height: (84/72)
+    letter-spacing: -.5px  
+    font-weight: 600
+    color: $dark 
+    transition: color .25s
+    +d
+      font-size: 42px
+      line-height: (56/42)
+    +m
+      font-size: 24px
+      line-height: 1.5
+    +a
+      font-size: 32px
+    span
+      display: block
+      transform: translateY(110%)
+      transition: transform .25s 
+      transition-delay: .3s 
+    &:hover
+      color: $purple
+    +nl
+      margin-bottom: 16px 
+      +d
+        margin-bottom: 8px
+      +m
+        margin-bottom: 0
+  &__wrapper.visible &__item
+    span
+      transform: translateX(0)
+    &:first-child span
+      transition-delay: .2s
+    &:nth-child(2) span
+      transition-delay: .4s 
+    &:nth-child(3) span
+      transition-delay: .6s 
+    &:nth-child(4) span
+      transition-delay: .8s 
