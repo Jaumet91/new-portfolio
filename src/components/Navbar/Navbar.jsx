@@ -12,20 +12,27 @@ export const Navbar = () => {
     <nav className='navbar' id='navbar'>
       <div className='navbar__center center'>
         <Link to='/' className='navbar__logo' onClick={onHandleClick}>
-          <img className='navbar___pic' src={logo} />
+          <img className='navbar__pic' src={logo} />
         </Link>
-        <div className='navbar__social navbar__social__main'>
+        <div className='navbar__social navbar__social_nav'>
           <a
             className='navbar__link'
-            href='https://www.linkedin.com/in/jaimecortes91/'>
-            <LinkedIn className='icon-linkedin' height={'25'} width={'25'} />
+            href='https://www.linkedin.com/in/jaimecortes91/'
+            target='_blank'
+            rel='noreferrer'>
+            <LinkedIn className='icon' height={'17'} width={'17'} />
             LinkedIn
           </a>
-          <a className='navbar__link' href='https://github.com/Jaumet91'>
-            <Github className='icon-linkedin' height={'25'} width={'25'} />
+          <a
+            className='navbar__link'
+            href='https://github.com/Jaumet91'
+            target='_blank'
+            rel='noreferrer'>
+            <Github className='icon' height={'20'} width={'20'} />
             GitHub
           </a>
         </div>
+        <button className='navbar__burger'></button>
       </div>
       <div className='navbar__wrapper'></div>
     </nav>
