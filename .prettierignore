@@ -1,0 +1,4 @@
+dist
+yarn.lock
+config.js
+node_modules
