@@ -20,28 +20,28 @@ export const data = {
 
   detailsItems: [
     {
-      category: 'User Interface',
-      text: 'We have got quite a few already made templates for better project management that you can use now.',
+      category: 'Interfaz de usuario',
+      text: 'Programo interfaces de usuario interactivas, aportando ideas y aplicando buenas prácticas.',
       classProp: 'cursor',
       aosDelay: '0'
     },
     {
-      category: 'User Interface1',
-      text: 'We have got quite a few already made templates for better project management that you can use now.',
+      category: 'A la vanguardia',
+      text: 'Tecnologías escalables que aportan un buen rendimiento y experiencias de usuario fluídas.',
       classProp: 'hand',
       aosDelay: '150'
     },
     {
-      category: 'User Interface2',
-      text: 'We have got quite a few already made templates for better project management that you can use now.',
+      category: 'Tendencias de diseño',
+      text: 'Atención al detalle, las aplicaciones también tienen que ir a la moda!.',
       classProp: 'color',
       aosDelay: '300'
     },
     {
-      category: 'User Interface3',
-      text: 'We have got quite a few already made templates for better project management that you can use now.',
-      classProp: 'color',
-      aosDelay: '300'
+      category: 'Responsive Design',
+      text: 'Todas las aplicaciones adaptadas para todo tipo de pantallas y dispositivos.',
+      classProp: 'responsive',
+      aosDelay: '0'
     }
   ]
 };

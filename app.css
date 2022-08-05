@@ -1365,6 +1365,28 @@ a.btn {
     width: 168px;
   }
 }
+.details__preview_responsive {
+  background: #4C40F7;
+}
+.details__preview_responsive .details__img {
+  top: -20px;
+  left: -60px;
+  width: 330px;
+}
+@media only screen and (max-width: 1279px) {
+  .details__preview_responsive .details__img {
+    top: -30px;
+    left: -40px;
+    width: 270px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .details__preview_responsive .details__img {
+    top: -5px;
+    left: -25px;
+    width: 270px;
+  }
+}
 .details__preview_hand {
   background: #4C40F7;
 }

@@ -16,6 +16,7 @@ import figure3 from './figure-3.png';
 import cursor from './cursor.png';
 import hand from './hand.png';
 import color from './color-picker.png';
+import responsive from './responsive.png';
 
 export {
   logo,
@@ -35,5 +36,6 @@ export {
   figure3,
   cursor,
   hand,
-  color
+  color,
+  responsive
 };

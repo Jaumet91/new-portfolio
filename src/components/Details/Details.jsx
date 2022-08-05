@@ -7,10 +7,10 @@ import { owlSliderDetails } from '../../helpers/owlConfig';
 import { ArrowRight } from '../icons';
 import { DetailsItem, Figures } from './';
 import { data } from '../../../data';
-import { cursor, hand, color } from '../../assets/images';
+import { cursor, hand, color, responsive } from '../../assets/images';
 
 const { detailsItems } = data;
-const imagesDetailsItems = [cursor, hand, color, hand];
+const imagesDetailsItems = [cursor, hand, color, responsive];
 
 export const Details = () => {
   return (
