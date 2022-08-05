@@ -9,8 +9,8 @@ export const data = {
       url: '#work'
     },
     {
-      name: 'Servicios',
-      url: '#services'
+      name: 'Portfolio',
+      url: '#portfolio'
     },
     {
       name: 'Contacto',

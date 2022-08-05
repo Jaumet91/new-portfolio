@@ -25,6 +25,12 @@ import workCube4 from './work-cube-4.png';
 import workCube5 from './work-cube-5.png';
 import workCube6 from './work-cube-6.png';
 import workCube7 from './work-cube-7.png';
+import cases1 from './cases-pic-1.jpg';
+import cases2 from './cases-pic-2.jpg';
+import cases3 from './cases-pic-3.jpg';
+import cases4 from './cases-pic-4.jpg';
+import cases5 from './cases-pic-5.jpg';
+import cases6 from './cases-pic-6.jpg';
 
 export {
   logo,
@@ -53,5 +59,11 @@ export {
   workCube4,
   workCube5,
   workCube6,
-  workCube7
+  workCube7,
+  cases1,
+  cases2,
+  cases3,
+  cases4,
+  cases5,
+  cases6
 };

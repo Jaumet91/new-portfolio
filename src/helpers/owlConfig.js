@@ -1,3 +1,5 @@
+import React from 'react';
+
 const navArrows = [
   `
     <span><svg class="icon icon-arrow-prev">
@@ -29,24 +31,24 @@ export const owlSliderDetails = {
   }
 };
 
-export const owlSliderReview = {
-  items: 1,
+export const owlSliderCases = {
+  items: 2,
   nav: true,
   navElement: 'button',
   navText: navArrows,
   dots: false,
   loop: true,
   smartSpeed: 700,
-  autoplay: true,
-  autoplayTimeout: 5000,
   responsive: {
     320: {
       nav: false,
-      dots: true
+      dots: true,
+      items: 1
     },
     768: {
       nav: true,
-      dots: false
+      dots: false,
+      items: 2
     }
   }
 };

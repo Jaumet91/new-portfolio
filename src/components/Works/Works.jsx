@@ -27,7 +27,7 @@ export const Works = () => {
           </div>
           <Link
             className='scroll'
-            to='cases'
+            to='portfolio'
             data-aos='transform'
             smooth={true}
             offset={50}
@@ -35,7 +35,7 @@ export const Works = () => {
             <div className='scroll__icon'>
               <img className='scroll__pic' src={scroll} alt='scroll' />
             </div>
-            <div className='scroll__text'>Casos de estudio</div>
+            <div className='scroll__text'>Portfolio</div>
           </Link>
         </div>
       </section>
