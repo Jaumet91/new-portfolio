@@ -46,6 +46,9 @@ export const Details = () => {
             ))}
           </OwlCarousel>
         </div>
+        <div className='details__figures'>
+          <div className='details__figure'></div>
+        </div>
       </section>
 
       <a className='details__contact' href='contact'></a>

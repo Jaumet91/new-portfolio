@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-scroll';
 
+import { Context } from '../../context';
 import {
   bgMain,
   scroll,
@@ -17,13 +18,7 @@ import {
 } from '../../assets/images';
 
 export const Hero = () => {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const { offsetY } = useContext(Context);
 
   return (
     <>
