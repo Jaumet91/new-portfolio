@@ -17,6 +17,14 @@ import cursor from './cursor.png';
 import hand from './hand.png';
 import color from './color-picker.png';
 import responsive from './responsive.png';
+import workCube from './work-cube.png';
+import workCube1 from './work-cube-1.png';
+import workCube2 from './work-cube-2.png';
+import workCube3 from './work-cube-3.png';
+import workCube4 from './work-cube-4.png';
+import workCube5 from './work-cube-5.png';
+import workCube6 from './work-cube-6.png';
+import workCube7 from './work-cube-7.png';
 
 export {
   logo,
@@ -37,5 +45,13 @@ export {
   cursor,
   hand,
   color,
-  responsive
+  responsive,
+  workCube,
+  workCube1,
+  workCube2,
+  workCube3,
+  workCube4,
+  workCube5,
+  workCube6,
+  workCube7
 };

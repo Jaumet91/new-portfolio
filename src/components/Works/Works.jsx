@@ -1,5 +1,6 @@
 import { Link } from 'react-scroll';
 
+import { WorkCubes } from './';
 import { scroll } from '../../assets/images';
 
 export const Works = () => {
@@ -15,14 +16,14 @@ export const Works = () => {
             className='work__title title h1'
             data-aos='animation-scale-y'
             data-aos-delay='150'>
-            Full-Stack Developer en Roots Technology
+            Full-Stack Developer para Roots Technology
           </h2>
           <div
             className='work__text'
             data-aos='animation-scale-y'
             data-aos-delay='300'>
-            Roots Technology es una nueva startup de divulgación y orientación
-            de medicina integrativa
+            Roots Technology es una nueva startup centrada en la divulgación de
+            conocimientos sobre medicina integrativa
           </div>
           <Link
             className='scroll'
@@ -38,6 +39,7 @@ export const Works = () => {
           </Link>
         </div>
       </section>
+      <WorkCubes />
     </article>
   );
 };

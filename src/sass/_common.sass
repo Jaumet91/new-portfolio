@@ -1209,6 +1209,83 @@ body:not(.touch-device) .owl-item:hover .details__preview
     color: $wh 
     +m
       display: none
+  &__figures
+    position: absolute
+    top: 3px
+    right: calc(50% - 717px) 
+    z-index: 2
+    width: 1290px
+    font-size: 0
+    +d
+      right: calc(50% - 514px) 
+      width: 910px
+    +t
+      right: calc(50% - 480px) 
+    +m
+      top: auto
+      right: 50%
+      bottom: -108px
+      width: 850px
+      transform: translateX(30%)
+  &__figure
+    width: 100%
+    pointer-events: none
+    &:first-child
+      position: relative
+      top: 250px
+    &:nth-child(2)
+      top: 15.8%
+      left: -10%
+      z-index: 2
+      width: 90%
+    &:nth-child(3)
+      top: 28.8%
+      left: 39%
+      z-index: 2
+      width: 72%
+    &:nth-child(4)
+      top: 25%
+      left: 13.4%
+      z-index: 2
+      width: 75%
+    &:nth-child(5)
+      top: 9.7%
+      left: -3%
+      z-index: 3
+      width: 93%
+    &:nth-child(6)
+      top: 7.5%
+      left: 37%
+      z-index: 3
+      width: 67%
+    &:nth-child(7)
+      top: 35%
+      +d
+        top: 50%
+      +a
+        top: 40%
+      left: 31.3%
+      z-index: 4
+      width: 66%
+    +nf
+      position: absolute
+  &__pic
+    width: 100%
+  &__preview
+    position: absolute
+    top: 40px
+    left: calc(50% - 634px)
+    width: 193px 
+    font-size: 0
+    +d
+      top: -70px
+      left: 42px
+      width: 143px
+    +m
+      top: -10px
+      left: auto
+      right: 35px
+
 
 [data-aos="transform"]
   transform: rotateX(90deg) skewY(-5deg)
@@ -1241,3 +1318,6 @@ body:not(.touch-device) .owl-item:hover .details__preview
   &.aos-animate 
     transform: translateY(0) scale(1)
     opacity: 1
+
+.test
+  height: 100vh

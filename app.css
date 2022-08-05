@@ -1891,6 +1891,115 @@ body:not(.touch-device) .owl-item:hover .details__preview {
     display: none;
   }
 }
+.work__figures {
+  position: absolute;
+  top: 3px;
+  right: calc(50% - 717px);
+  z-index: 2;
+  width: 1290px;
+  font-size: 0;
+}
+@media only screen and (max-width: 1279px) {
+  .work__figures {
+    right: calc(50% - 514px);
+    width: 910px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .work__figures {
+    right: calc(50% - 480px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .work__figures {
+    top: auto;
+    right: 50%;
+    bottom: -108px;
+    width: 850px;
+    transform: translateX(30%);
+  }
+}
+.work__figure {
+  width: 100%;
+  pointer-events: none;
+}
+.work__figure:first-child {
+  position: relative;
+  top: 250px;
+}
+.work__figure:nth-child(2) {
+  top: 15.8%;
+  left: -10%;
+  z-index: 2;
+  width: 90%;
+}
+.work__figure:nth-child(3) {
+  top: 28.8%;
+  left: 39%;
+  z-index: 2;
+  width: 72%;
+}
+.work__figure:nth-child(4) {
+  top: 25%;
+  left: 13.4%;
+  z-index: 2;
+  width: 75%;
+}
+.work__figure:nth-child(5) {
+  top: 9.7%;
+  left: -3%;
+  z-index: 3;
+  width: 93%;
+}
+.work__figure:nth-child(6) {
+  top: 7.5%;
+  left: 37%;
+  z-index: 3;
+  width: 67%;
+}
+.work__figure:nth-child(7) {
+  top: 35%;
+  left: 31.3%;
+  z-index: 4;
+  width: 66%;
+}
+@media only screen and (max-width: 1279px) {
+  .work__figure:nth-child(7) {
+    top: 50%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .work__figure:nth-child(7) {
+    top: 40%;
+  }
+}
+.work__figure:not(:first-child) {
+  position: absolute;
+}
+.work__pic {
+  width: 100%;
+}
+.work__preview {
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 634px);
+  width: 193px;
+  font-size: 0;
+}
+@media only screen and (max-width: 1279px) {
+  .work__preview {
+    top: -70px;
+    left: 42px;
+    width: 143px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .work__preview {
+    top: -10px;
+    left: auto;
+    right: 35px;
+  }
+}
 
 [data-aos=transform] {
   transform: rotateX(90deg) skewY(-5deg);
@@ -1930,6 +2039,10 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 [data-aos=animation-scale].aos-animate {
   transform: translateY(0) scale(1);
   opacity: 1;
+}
+
+.test {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=app.css.map */
