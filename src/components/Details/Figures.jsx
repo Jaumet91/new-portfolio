@@ -27,7 +27,7 @@ export const Figures = () => {
           alt='pic 2'
           style={{
             willChange: 'transform',
-            transform: `translate3d(0px,${-offsetY * 0.1 + 128}px, 0px)`,
+            transform: `translate3d(0px,${-offsetY * 0.1 + 20}px, 0px)`,
             transition: 'transform 0.5s cubic-bezier(0, 0, 0, 1) 0s'
           }}
         />

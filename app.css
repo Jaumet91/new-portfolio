@@ -1880,13 +1880,13 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 @media only screen and (max-width: 1279px) {
   .work__text {
     max-width: 270px;
-    margin: 0;
+    margin-bottom: 32px;
   }
 }
 .work .scroll {
   color: #fff;
 }
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 767px) {
   .work .scroll {
     display: none;
   }

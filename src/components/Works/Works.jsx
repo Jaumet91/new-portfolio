@@ -1,3 +1,7 @@
+import { Link } from 'react-scroll';
+
+import { scroll } from '../../assets/images';
+
 export const Works = () => {
   return (
     <article className='work'>
@@ -20,6 +24,18 @@ export const Works = () => {
             Roots Technology es una nueva startup de divulgación y orientación
             de medicina integrativa
           </div>
+          <Link
+            className='scroll'
+            to='cases'
+            data-aos='transform'
+            smooth={true}
+            offset={50}
+            duration={1000}>
+            <div className='scroll__icon'>
+              <img className='scroll__pic' src={scroll} alt='scroll' />
+            </div>
+            <div className='scroll__text'>Casos de estudio</div>
+          </Link>
         </div>
       </section>
     </article>
