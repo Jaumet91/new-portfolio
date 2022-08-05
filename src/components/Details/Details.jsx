@@ -1,6 +1,16 @@
 import { Link } from 'react-scroll';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
+import { owlSliderDetails } from '../../helpers/owlConfig';
+import { cursor, hand, color } from '../../assets/images';
 import { ArrowRight } from '../icons';
+import { DetailsItem } from './';
+import { data } from '../../../data';
+
+const { detailsItems } = data;
+const imagesDetailsItems = [cursor, hand, color];
 
 export const Details = () => {
   return (
@@ -22,9 +32,23 @@ export const Details = () => {
             <ArrowRight className='icon' height={'17'} width={'17'} />
           </button>
         </div>
-        <div className='details__container'></div>
+        <div className='details__container'>
+          <OwlCarousel {...owlSliderDetails}>
+            {detailsItems.map(({ category, text, classProp, aosDelay }, i) => (
+              <DetailsItem
+                key={category}
+                image={`${imagesDetailsItems[i]}`}
+                category={category}
+                text={text}
+                classProp={classProp}
+                aosDelay={aosDelay}
+              />
+            ))}
+            <div className='owl-nav'></div>
+          </OwlCarousel>
+        </div>
       </section>
-      <div className='details__figures'></div>
+
       <a className='details__contact' href='contact'></a>
       <Link
         className='details__contact'

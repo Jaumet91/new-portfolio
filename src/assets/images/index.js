@@ -13,6 +13,9 @@ import headerPic7 from './main-pic-7.png';
 import figure1 from './figure-1.png';
 import figure2 from './figure-2.png';
 import figure3 from './figure-3.png';
+import cursor from './cursor.png';
+import hand from './hand.png';
+import color from './color-picker.png';
 
 export {
   logo,
@@ -29,5 +32,8 @@ export {
   headerPic7,
   figure1,
   figure2,
-  figure3
+  figure3,
+  cursor,
+  hand,
+  color
 };

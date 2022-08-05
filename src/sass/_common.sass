@@ -791,6 +791,243 @@ a.btn
         height: 64px
       +a
         min-width: 100%
+  &__container
+    margin: 136px -9px 0
+    +d
+      margin-top: 64px
+  &__item
+    position: relative
+    padding: 85px 55px 65px
+    background: $wh 
+    border-radius: 40px
+    text-align: center
+    +mac
+      padding: 56px 32px 46px 
+    +m
+      padding: 48px 44px
+      border-radius: 28px 
+    &:before
+      content: ""
+      position: absolute
+      top: 32px
+      left: 20px
+      right: 20px
+      bottom: -43px
+      z-index: -1
+      border-radius: 24px
+      background: #DBDEE1
+      filter: blur(56.985px) 
+      pointer-events: none
+      transition: all .25s
+      +d
+        top: 24px
+        left: 25px
+        right: 25px
+        bottom: -52px
+        border-radius: 17px
+        filter: blur(26.985px)
+      +m
+        left: 15px
+        right: 15px
+  &__preview
+    position: relative
+    width: 240px
+    height: 240px
+    margin: 0 auto 68px 
+    border-radius: 50%
+    font-size: 0
+    transition: transform .25s
+    +mac
+      margin-bottom: 46px
+    +d
+      width: 170px
+      height: 170px
+    +m
+      width: 200px
+      height: 200px
+      margin-bottom: 24px
+    &_cursor
+      background: $yellow 
+      .details__img
+        top: 15px
+        right: -22px
+        width: 209px
+        +d
+          top: 10px
+          right: -15px
+          width: 148px
+        +m
+          width: 168px
+    &_hand
+      background: $purple 
+      .details__img
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: 124px
+        +d
+          width: 90px
+        +m
+          width: 100px
+    &_color
+      background: $pink 
+      .details__img
+        top: 22px
+        right: -5px
+        width: 248px
+        +d
+          top: 15px
+          right: 0
+          width: 155px
+        +m
+          width: 175px
+  &__img
+    position: absolute
+    pointer-events: none  
+  &__img &__pic
+    width: 100% 
+  &__category
+    margin-bottom: 24px
+    +d
+      margin-bottom: 16px
+  &__text
+    margin-bottom: 40px
+    color: $gray-text 
+    +d
+  .owl-stage-outer
+    overflow: visible !important
+  .owl-item
+    padding: 0 9px 
+    opacity: 0
+    visibility: hidden
+    transition: all .25s
+    &:hover
+      position: relative
+      z-index: 1
+    &.active
+      visibility: visible
+      opacity: 1
+    
+.owl-nav
+  position: relative
+  z-index: 1
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 67px
+  height: 40px
+  +d
+    margin-top: 52px
+  +m
+    height: 32px
+    margin-top: 36px
+
+.owl-prev,
+.owl-next
+  position: relative
+  width: 30px
+  height: 40px
+  font-size: 0
+  +m
+    height: 32px
+  span
+    display: inline-block
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 30px
+    height: 2px
+    background: $gray-color 
+    font-size: 0
+    transition: all .25s 
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      transform: translateY(-50%) scale(0)
+      width: 40px
+      height: 40px
+      border: 2px solid $purple
+      border-radius: 50%
+      transition: transform .25s
+      +m
+        width: 34px
+        height: 34px
+  .icon
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 14px
+    fill: $gray-color
+    transition: fill .25s
+  &:hover
+    span
+      width: 52px
+      background: $dark 
+      &:before
+        transform: translateY(-50%) scale(1)
+    .icon
+      fill: $dark
+
+.owl-prev
+  margin-right: 27px
+  +m
+    margin-right: 20px
+  span
+    right: 0
+    .icon
+      left: 0
+    &:before
+      left: -17px
+      +m
+        left: -14px
+
+.owl-next
+  span
+    left: 0
+    .icon
+      right: 0
+    &:before
+      right: -17px
+      +m
+        right: -14px
+
+.owl-dots
+  display: flex
+  padding: 0 32px 
+  
+.owl-dot
+  position: relative
+  flex-shrink: 0 
+  width: 8px
+  height: 8px
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 4px
+    height: 4px
+    border-radius: 50%  
+    background: #D8D8D8
+    transition: all .25s 
+  &.active:before
+    transform: translate(-50%,-50%) scale(2)
+    background: $purple
+  +nl
+    margin-right: 12px
+
+body:not(.touch-device) .details__item:before
+  visibility: hidden
+  opacity: 0
+
+body:not(.touch-device) .owl-item:hover .details__item:before
+  visibility: visible
+  opacity: 1
+
+body:not(.touch-device) .owl-item:hover .details__preview
+  transform: scale(1.15)
 
 [data-aos="transform"]
   transform: rotateX(90deg) skewY(-5deg)
@@ -814,4 +1051,12 @@ a.btn
   transition-property: transform, opacity
   &.aos-animate 
     transform: translateY(0) scaleY(1)
-    opacity: 1 
+    opacity: 1
+
+[data-aos="animation-scale"]
+  transform: translateY(30px) scale(.5)
+  opacity: 0
+  transition-property: transform, opacity
+  &.aos-animate 
+    transform: translateY(0) scale(1)
+    opacity: 1
