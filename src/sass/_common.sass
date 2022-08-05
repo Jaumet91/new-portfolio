@@ -37,9 +37,6 @@ $pink: #FFBDBD
 $gray-color: #9F9FA9
 $gray-text: #6b6b6b
 
-.test
-  height: 100vh
-
 html
   &.no-scroll
     overflow: hidden
@@ -63,6 +60,48 @@ input,
 textarea,
 select,
   +f
+
+.btn
+  min-width: 240px
+  height: 72px
+  border-radius: 20px
+  +f
+  font-size: 18px
+  font-weight: 500 
+  transition: all .25s 
+  +d
+    min-width: 200px
+    height: 64px
+    border-radius: 12px 
+    font-size: 16px
+  .icon,
+  &__text
+    display: inline-block
+    vertical-align: middle
+  .icon
+    +nf
+      margin-left: 16px
+    +nl
+      margin-right: 16px
+  .icon
+    font-size: 16px
+    +d
+      font-size: 14px
+  &:hover
+    transform: translateY(-2px)
+  &:active
+    transform: translateY(2px)
+  &_purple
+    background: $purple
+    color: $wh 
+  &_dark
+    background: $bl
+    color: $wh  
+
+a.btn
+  display: inline-flex
+  justify-content: center
+  align-items: center
 
 .h1,
 .h2,
@@ -696,7 +735,62 @@ select,
     &:nth-child(4) span
       transition-delay: .8s
 
-
+.details
+  position: relative
+  padding: 258px 0 128px
+  +x
+    padding-top: 200px
+  +d
+    padding: 128px 0 96px
+  +m
+    padding: 14px 0 64px
+  &__center
+    position: relative
+    z-index: 5
+  &__head
+    margin-bottom: 145px
+    +d
+      margin-bottom: 55px
+    +m
+      padding-bottom: 56px
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 136px
+        height: 1px
+        background: #ECECEC
+  &__title
+    margin-bottom: 72px
+    font-size: 132px
+    line-height: 1.02
+    letter-spacing: -1.3px
+    font-weight: 600 
+    +x
+      font-size: 112px
+    +d
+      margin-bottom: 32px
+      font-size: 96px
+      line-height: (112/96)
+    +t
+      font-size: 80px 
+    +m
+      margin-bottom: 48px
+      font-size: 72px
+      line-height: (84/72)
+  &__btn 
+    +m
+      text-align: center
+    .btn
+      min-width: 266px
+      height: 80px
+      +d
+        min-width: 221px
+        height: 64px
+      +a
+        min-width: 100%
 
 [data-aos="transform"]
   transform: rotateX(90deg) skewY(-5deg)
@@ -713,3 +807,11 @@ select,
   &.aos-animate 
     transform: translateY(0)
     opacity: 1
+
+[data-aos="animation-scale-y"]
+  transform: translateY(40px) scaleY(1.4)
+  opacity: 0
+  transition-property: transform, opacity
+  &.aos-animate 
+    transform: translateY(0) scaleY(1)
+    opacity: 1 
