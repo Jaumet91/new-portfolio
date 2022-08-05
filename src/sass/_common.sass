@@ -906,6 +906,82 @@ a.btn
     margin-bottom: 40px
     color: $gray-text 
     +d
+  &__figure
+    position: absolute
+    z-index: -1
+    font-size: 0 
+    pointer-events: none
+    &:first-child
+      top: 200px
+      right: calc(50% - 474px) 
+      z-index: 2
+      width: 244px
+      +mac
+        right: calc(50% - 374px) 
+      +d
+        top: 285px
+        right: calc(50% - 354px) 
+        width: 155px
+        opacity: .5 
+      +t
+        right: calc(50% - 300px) 
+      +m
+        display: none
+    &:nth-child(2)
+      top: 744px
+      right: calc(50% - 452px) 
+      z-index: 3
+      width: 371px
+      +mac
+        top: 680px
+        right: calc(50% - 350px)
+      +d
+        top: 495px
+        right: calc(50% - 298px)
+        width: 242px
+      +t
+        right: calc(50% - 200px)
+      +m
+        top: 336px
+        right: 0
+        width: 150px
+    &:nth-child(3)
+      top: 129px
+      right: calc(50% - 1270px) 
+      z-index: 1
+      width: 1260px
+      +mac
+        right: calc(50% - 1070px)
+        width: 1000px 
+      +d
+        top: 75px
+        right: calc(50% - 860px)
+        width: 800px
+      +t
+        right: calc(50% - 820px)
+      +m
+        top: 58px
+        right: -160px
+        width: 430px
+  &__figure &__pic
+    width: 100% 
+  &__contact
+    position: absolute
+    right: calc(50% - 585px)
+    bottom: 131px
+    z-index: 5
+    color: $purple
+    cursor: pointer
+    transition: opacity .25s
+    +mac
+      right: 82px
+    +d
+      bottom: 103px
+      font-size: 16px
+    +m
+      display: none
+    &:hover
+      opacity: .85
   .owl-stage-outer
     overflow: visible !important
   .owl-item

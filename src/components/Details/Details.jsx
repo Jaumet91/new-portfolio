@@ -4,10 +4,10 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 import { owlSliderDetails } from '../../helpers/owlConfig';
-import { cursor, hand, color } from '../../assets/images';
 import { ArrowRight } from '../icons';
-import { DetailsItem } from './';
+import { DetailsItem, Figures } from './';
 import { data } from '../../../data';
+import { cursor, hand, color } from '../../assets/images';
 
 const { detailsItems } = data;
 const imagesDetailsItems = [cursor, hand, color, hand];
@@ -46,12 +46,8 @@ export const Details = () => {
             ))}
           </OwlCarousel>
         </div>
-        <div className='details__figures'>
-          <div className='details__figure'></div>
-        </div>
       </section>
-
-      <a className='details__contact' href='contact'></a>
+      <Figures />
       <Link
         className='details__contact'
         to='contact'
@@ -59,8 +55,7 @@ export const Details = () => {
         smooth={true}
         offset={50}
         duration={1000}>
-        Contact me
-        <div className='scroll__text'>Ver más</div>
+        Trabajemos juntos
       </Link>
     </article>
   );
