@@ -55,7 +55,7 @@ export const Details = () => {
         smooth={true}
         offset={50}
         duration={1000}>
-        Trabajemos juntos
+        Contacta conmigo
       </Link>
     </article>
   );

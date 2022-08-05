@@ -1131,6 +1131,85 @@ body:not(.touch-device) .owl-item:hover .details__item:before
 body:not(.touch-device) .owl-item:hover .details__preview
   transform: scale(1.15)
 
+.work
+  position: relative
+  padding: 246px 0 80px
+  background: #1B1B87 
+  +d
+    padding: 143px 0
+  +m
+    padding: 56px 0 475px  
+    overflow: hidden
+  &__circles
+    +coverdiv
+    overflow: hidden
+    pointer-events: none
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      border-radius: 50%
+      border: 1px solid rgba($wh, .15)
+      +m
+        left: 50%
+        transform: translate(-50%,0)
+        border: 1px solid rgba($wh, .1)
+    &:before
+      width: 1024px
+      height: 1024px
+      right: calc(50% - 860px) 
+      +d
+        right: calc(50% - 610px) 
+        width: 730px
+        height: 730px
+      +m
+        top: 104px
+        width: 368px
+        height: 368px
+    &:after
+      width: 1670px
+      height: 1670px
+      right: calc(50% - 1186px)
+      +d
+        right: calc(50% - 950px)
+        width: 1290px
+        height: 1290px 
+      +m
+        top: -15px
+        right: auto
+        width: 600px
+        height: 600px
+  &__wrap
+    position: relative
+    z-index: 3
+    max-width: 570px
+    color: $wh 
+    +d
+      max-width: 400px
+  &__stage
+    +d
+      color: $wh
+      &:before
+        background: $wh
+  &__title
+    margin-bottom: 48px 
+    +d
+      margin-bottom: 32px
+  &__text
+    max-width: 470px
+    margin-bottom: 202px 
+    +mac
+      margin-bottom: 140px
+    +d
+      max-width: 270px
+      margin: 0
+  .scroll
+    color: $wh 
+    +d
+      display: none
+
 [data-aos="transform"]
   transform: rotateX(90deg) skewY(-5deg)
   opacity: 0
