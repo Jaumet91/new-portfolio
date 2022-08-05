@@ -36,6 +36,12 @@ export const data = {
       text: 'We have got quite a few already made templates for better project management that you can use now.',
       classProp: 'color',
       aosDelay: '300'
+    },
+    {
+      category: 'User Interface3',
+      text: 'We have got quite a few already made templates for better project management that you can use now.',
+      classProp: 'color',
+      aosDelay: '300'
     }
   ]
 };

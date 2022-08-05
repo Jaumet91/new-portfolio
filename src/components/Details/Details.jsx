@@ -10,7 +10,7 @@ import { DetailsItem } from './';
 import { data } from '../../../data';
 
 const { detailsItems } = data;
-const imagesDetailsItems = [cursor, hand, color];
+const imagesDetailsItems = [cursor, hand, color, hand];
 
 export const Details = () => {
   return (
@@ -44,7 +44,6 @@ export const Details = () => {
                 aosDelay={aosDelay}
               />
             ))}
-            <div className='owl-nav'></div>
           </OwlCarousel>
         </div>
       </section>
