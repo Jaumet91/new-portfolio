@@ -2102,6 +2102,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 .cases {
   position: relative;
   padding-top: 128px;
+  margin-bottom: 90px;
 }
 @media only screen and (max-width: 1279px) {
   .cases {
