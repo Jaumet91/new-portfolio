@@ -371,6 +371,50 @@ a.btn {
   transform: translateY(3px);
 }
 
+[data-aos=transform] {
+  transform: rotateX(90deg) skewY(-5deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos=transform].aos-animate {
+  transform: translate(0) rotateX(0deg) skewY(0deg);
+  opacity: 1;
+}
+
+[data-aos=animation-translate-y] {
+  transform: translateY(40px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos=animation-translate-y].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+[data-aos=animation-scale-y] {
+  transform: translateY(40px) scaleY(1.4);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos=animation-scale-y].aos-animate {
+  transform: translateY(0) scaleY(1);
+  opacity: 1;
+}
+
+[data-aos=animation-scale] {
+  transform: translateY(30px) scale(0.5);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos=animation-scale].aos-animate {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.test {
+  height: 100vh;
+}
+
 .header {
   position: relative;
   padding: 270px 0 105px;
@@ -2430,50 +2474,6 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 }
 .cases_other .cases__figure:nth-child(2) {
   top: 160px;
-}
-
-[data-aos=transform] {
-  transform: rotateX(90deg) skewY(-5deg);
-  opacity: 0;
-  transition-property: transform, opacity;
-}
-[data-aos=transform].aos-animate {
-  transform: translate(0) rotateX(0deg) skewY(0deg);
-  opacity: 1;
-}
-
-[data-aos=animation-translate-y] {
-  transform: translateY(40px);
-  opacity: 0;
-  transition-property: transform, opacity;
-}
-[data-aos=animation-translate-y].aos-animate {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-[data-aos=animation-scale-y] {
-  transform: translateY(40px) scaleY(1.4);
-  opacity: 0;
-  transition-property: transform, opacity;
-}
-[data-aos=animation-scale-y].aos-animate {
-  transform: translateY(0) scaleY(1);
-  opacity: 1;
-}
-
-[data-aos=animation-scale] {
-  transform: translateY(30px) scale(0.5);
-  opacity: 0;
-  transition-property: transform, opacity;
-}
-[data-aos=animation-scale].aos-animate {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-}
-
-.test {
-  height: 100vh;
 }
 
 /*# sourceMappingURL=app.css.map */

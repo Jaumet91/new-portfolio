@@ -1,0 +1,279 @@
+
+.wrapper
+  &_gradient
+    background: radial-gradient(75.22% 75.22% at 20.49% 12.79%, #FFFFFF 0%, rgba(228, 231, 233, 0.502295) 100%)
+    +m
+      background: none 
+  &_dark
+    position: relative
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      +m
+        display: none
+    &:before
+      top: 700px
+      right: 0
+      left: 0
+      bottom: 0
+      clip-path: polygon(0 600px, 100% 0, 100% 100%, 0 100%)
+      background: $bl  
+      +d
+        top: 500px
+        clip-path: polygon(0 440px, 100% 0, 100% 100%, 0 100%)
+    &:after
+      top: 741px
+      left: calc(50% - 720px) 
+      width: 140px
+      height: 560px
+      clip-path: polygon(0 58px, 100% 0, 100% calc(100% - 58px), 0 100%)
+      background: $purple
+      +x
+        top: 760px
+      +mac
+        display: none
+      +rmin(1441)
+        display: none 
+
+.cases
+  position: relative
+  padding-top: 128px
+  +d
+    padding-top: 96px
+  +m
+    padding-top: 64px
+  &__center
+    position: relative
+    z-index: 2
+  &__title
+    margin-bottom: 80px
+    +d
+      margin-bottom: 32px
+  &__nav
+    display: flex
+    margin-bottom: 88px
+    +d
+      margin-bottom: 48px
+    +m
+      display: none
+  &__link
+    position: relative
+    cursor: pointer
+    padding-bottom: 10px
+    font-size: 16px
+    line-height: 1.5
+    font-weight: 500
+    color: $gray-color  
+    transition: color .25s
+    +d
+      font-size: 14px 
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0 
+      width: 0
+      height: 2px
+      margin: 0 auto
+      background: $purple
+      border-radius: 1px  
+      transition: width .25s
+    &:hover
+      color: $dark  
+    &.active
+      color: $dark
+      &:before
+        width: 100% 
+    +nl
+      margin-right: 96px
+      +d
+        margin-right: 48px
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: -32px -16px 0
+    +d
+      margin: -24px -12px 0
+    +m
+      display: block
+      width: calc(100% + 64px) 
+      margin: 0 -32px
+  &__item
+    position: relative
+    display: block
+    background: $wh
+    margin: 32px 12px 0
+    border-radius: 24px 
+    +d
+      border-radius: 17px
+    +m
+      background: none 
+      border-radius: 0  
+    &:before
+      content: ""
+      position: absolute
+      top: 24px
+      left: 30px
+      right: 30px
+      bottom: -96px
+      z-index: -1
+      border-radius: 24px
+      filter: blur(86.985px)
+      background: #DBDEE1 
+      visibility: hidden
+      opacity: 0
+      pointer-events: none
+      transition: all .25s 
+      +d
+        top: 30px
+        left: 24px
+        right: 24px
+        bottom: -51px
+        border-radius: 17px 
+        filter: blur(77px)
+      +m
+        display: none
+    &:hover
+      &:before
+        visibility: visible
+        opacity: 1
+  &__list &__item
+    display: flex
+    flex-direction: column
+    flex: 0 0 calc(50% - 32px)
+    // width: calc(50% - 32px)
+    // margin: 32px 16px 0  
+    +d
+      flex: 0 0 calc(50% - 24px)
+      // width: calc(50% - 24px)
+      // margin: 24px 12px 0
+    +m
+      width: 100%
+      margin: 0 
+  &__preview
+    position: relative
+    font-size: 0
+  &__pic
+    width: 100% 
+  &__preview &__pic
+    border-radius: 24px 24px 0 0 
+    +d
+      border-radius: 17px 17px 0 0 
+    +m
+      border-radius: 0 
+  &__box
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%) scale(.6)
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 150px
+    height: 150px
+    padding: 30px
+    border-radius: 50%
+    background: $bl  
+    text-align: center
+    opacity: 0
+    font-size: 18px
+    line-height: (24/18)
+    font-weight: 500
+    color: $wh   
+    transition: all .25s 
+    +m
+      display: none
+  &__item:hover &__box
+    opacity: 1
+    transform: translate(-50%,-50%) scale(1)
+  &__body
+    flex-grow: 1
+    padding: 48px 48px 76px
+    border-radius: 0 0 24px 24px 
+    background: $wh 
+    +d
+      padding: 40px 
+      border-radius: 0 0 17px 17px 
+    +t
+      padding: 32px 
+  &__info
+    margin-bottom: 8px
+    color: $dark
+    +d
+      margin-bottom: 4px
+  &__text
+    color: $gray-text 
+  &__tags
+    font-size: 14px
+    color: $purple
+    margin-top: 5px
+  &__figure
+    position: absolute
+    font-size: 0
+    pointer-events: none
+    +m
+      display: none
+    &:first-child
+      top: 128px
+      left: calc(50% - 181px)
+      width: 363px
+      +d
+        top: 80px
+        left: calc(50% - 135px)
+        width: 280px
+      +t
+        left: 400px
+    &:nth-child(2)
+      left: calc(50% - 1406px)
+      width: 1200px 
+      +d
+        left: -520px
+        width: 900px
+  &__container
+    margin: 0 -16px  
+    +d
+      margin: 0 -12px
+    +m
+      margin: 0 -32px  
+  .owl-stage-outer
+    overflow: visible
+  .owl-item
+    padding: 0 16px 
+    opacity: 0
+    transition: opacity .25s
+    +d
+      padding: 0 12px 
+    +m
+      padding: 0
+    &.active
+      opacity: 1
+  .owl-nav
+    position: absolute
+    top: -290px
+    right: calc(50% - 550px)
+    justify-content: stretch
+    +mac
+      right: 50px
+    +d
+      top: -210px
+  .owl-dots
+    padding: 0 32px 
+  &_main &__figure
+    &:nth-child(2)
+      top: 335px
+      +d
+        top: 260px
+  &_other
+    margin-bottom: 160px
+    +d
+      margin-bottom: 88px
+    +m
+      display: none
+      margin-bottom: 56px
+      padding-top: 0
+  &_other &__figure
+    &:nth-child(2)
+      top: 160px

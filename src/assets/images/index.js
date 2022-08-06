@@ -17,7 +17,7 @@ import cursor from './cursor.png';
 import hand from './hand.png';
 import color from './color-picker.png';
 import responsive from './responsive.png';
-import workCube from './work-cube.png';
+// import workCube from './work-cube.png';
 import workCube1 from './work-cube-1.png';
 import workCube2 from './work-cube-2.png';
 import workCube3 from './work-cube-3.png';
@@ -50,7 +50,7 @@ export {
   hand,
   color,
   responsive,
-  workCube,
+  // workCube,
   workCube1,
   workCube2,
   workCube3,
