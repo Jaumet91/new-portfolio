@@ -56,7 +56,7 @@ export const Portfolio = () => {
           ))}
         </div>
         <div className='cases__list' id='slider'>
-          {width < 767 ? (
+          {width < 768 ? (
             <OwlCarousel {...owlSliderPortfolio}>
               {filterCases.map(
                 ({ image, delay, title, description, tags, url }) => (

@@ -29,6 +29,12 @@ import cases1 from './cases-pic-1.png';
 import cases2 from './cases-pic-2.png';
 import cases3 from './cases-pic-3.png';
 import cases4 from './cases-pic-4.png';
+import figures1 from './figures-1.png';
+import figures2 from './figures-2.png';
+import figures3 from './figures-3.png';
+import figures4 from './figures-4.png';
+import figures5 from './figures-5.png';
+import figures6 from './figures-6.png';
 
 export {
   logo,
@@ -61,5 +67,11 @@ export {
   cases1,
   cases2,
   cases3,
-  cases4
+  cases4,
+  figures1,
+  figures2,
+  figures3,
+  figures4,
+  figures5,
+  figures6
 };

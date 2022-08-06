@@ -1,3 +1,74 @@
+.field
+  &__wrap
+    position: relative
+  &__input,
+  &__textarea,
+  &__select
+    width: 100%
+    background: rgba(244, 244, 244, 0.801191)
+    border-radius: 12px
+    border: 2px solid rgba(244, 244, 244, 0.801191)
+    +f
+    font-size: 18px
+    color: $dark 
+    transition: all .25s
+    +d
+      font-size: 16px
+    &:focus
+      border-color: $purple
+      background: $wh  
+    +placeholder
+      color: $gray-text
+  &__input:focus + &__icon .icon,
+  &__textarea:focus + &__icon .icon,
+  &__select:focus + &__icon .icon
+    fill: $purple
+  &__input,
+  &__select
+    height: 72px
+    padding: 0 72px 0 24px 
+    +d
+      height: 56px
+      padding-right: 56px
+  &__textarea
+    height: 200px
+    resize: none 
+    padding: 20px 72px 20px 24px 
+    +d
+      height: 110px
+      padding: 12px 56px 14px 24px 
+  &__select
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    &::-ms-expand
+      display: none
+    &:-moz-focusring
+      color: transparent
+      text-shadow: 0 0 0 #000 
+  &__icon
+    position: absolute
+    top: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 72px
+    height: 72px
+    font-size: 0
+    pointer-events: none
+    +d
+      width: 56px
+      height: 56px
+    .icon
+      font-size: 17px
+      fill: $dark
+      transition: fill .25s
+      +d
+        font-size: 14px 
+  &_textarea
+    font-size: 0
+
 .contacts
   position: relative
   margin-bottom: 182px
@@ -129,11 +200,6 @@
   &__btn .btn
     +m
       min-width: 100% 
-  &__category
-    display: none
-    +m
-      display: block
-      margin-bottom: 32px
   &__social
     display: flex
     align-items: center
@@ -228,3 +294,75 @@
       top: 90px
       right: -90px
       width: 320px
+      
+.figures
+  position: absolute
+  width: 1120px
+  pointer-events: none
+  font-size: 0
+  +d
+    width: 800px
+  +t
+    width: 700px
+  &__preview
+    &:nth-child(2)
+      top: 26%
+      left: -1.8%
+      width: 87%
+      +x
+        top: 24%
+      +mac
+        top: 20%
+      +d
+        top: -20%
+      +t
+        top: -30%
+      +m
+        top: -135%
+      +s
+        top: -105%
+    &:nth-child(3)
+      top: -6%
+      right: 16.2%
+      width: 19%
+      +d
+        top: -18%
+      +m
+        top: -34%
+      +s
+        top: -25%
+    &:nth-child(4)
+      top: 12%
+      right: 11.7%
+      z-index: 2
+      width: 26.2%
+    &:nth-child(5)
+      left: 35.2%
+      bottom: 57%
+      z-index: 3
+      width: 27.5%
+      +x
+        bottom: 54%
+      +d
+        bottom: 16%
+      +t
+        bottom: 9%
+      +m
+        bottom: -70%
+      +s
+        bottom: -50%
+    &:nth-child(6)
+      right: 0
+      bottom: -25%
+      z-index: 3
+      width: 34%
+      +d
+        bottom: 10%
+      +t
+        bottom: 20%
+      +m
+        display: none
+    +nf
+      position: absolute
+  &__preview &__pic
+    width: 100% 

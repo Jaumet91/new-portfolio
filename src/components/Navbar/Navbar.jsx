@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { logo, logoWhite, bgHeader } from '../../assets/images';
@@ -9,6 +9,12 @@ const { navLinks } = data;
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    isOpen
+      ? document.body.classList.add('no-scroll')
+      : document.body.classList.remove('no-scroll');
+  }, [isOpen]);
 
   return (
     <div className='navbar'>

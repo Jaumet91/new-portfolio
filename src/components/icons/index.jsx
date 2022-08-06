@@ -4,3 +4,7 @@ export * from './email';
 export * from './place';
 export * from './phone';
 export * from './arrowRight';
+export * from './send';
+export * from './profile';
+export * from './arrows';
+export * from './message';
