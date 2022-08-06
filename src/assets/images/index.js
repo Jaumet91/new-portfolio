@@ -17,7 +17,7 @@ import cursor from './cursor.png';
 import hand from './hand.png';
 import color from './color-picker.png';
 import responsive from './responsive.png';
-// import workCube from './work-cube.png';
+import workCube from './work-cube.png';
 import workCube1 from './work-cube-1.png';
 import workCube2 from './work-cube-2.png';
 import workCube3 from './work-cube-3.png';
@@ -35,6 +35,9 @@ import figures3 from './figures-3.png';
 import figures4 from './figures-4.png';
 import figures5 from './figures-5.png';
 import figures6 from './figures-6.png';
+import logoEmpty from './logo-empty.png';
+import footerCube1 from './footer-cube-1.png';
+import footerCube2 from './footer-cube-2.png';
 
 export {
   logo,
@@ -56,7 +59,7 @@ export {
   hand,
   color,
   responsive,
-  // workCube,
+  workCube,
   workCube1,
   workCube2,
   workCube3,
@@ -73,5 +76,8 @@ export {
   figures3,
   figures4,
   figures5,
-  figures6
+  figures6,
+  logoEmpty,
+  footerCube1,
+  footerCube2
 };

@@ -1,0 +1,161 @@
+.footer
+  position: relative
+  z-index: 2
+  color: $wh 
+  +m
+    position: relative
+    padding: 56px 0 60px 
+    background: $bl url('src/assets/images/bg-footer.png') no-repeat 100% 100% / 100% auto 
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      left: 50%
+      z-index: -1
+      transform: translateX(-50%)
+      border-radius: 50%
+      border: 1px solid rgba($wh, .1)  
+      pointer-events: none 
+    &:before
+      top: 90px
+      width: 600px
+      height: 600px
+    &:after
+      top: 201px
+      width: 376px
+      height: 376px
+  &__center
+    position: relative
+    z-index: 3
+  &__body
+    display: flex
+    align-items: flex-start
+    margin-bottom: 113px
+    padding-right: 74px
+    +mac
+      padding: 0
+    +d
+      margin-bottom: 88px
+    +m
+      display: block
+      margin-bottom: 52px
+  &__logo
+    display: inline-block
+    cursor: pointer
+    font-size: 0
+    +m
+      margin-bottom: 16px
+  &__logo &__pic
+    +d
+      width: 50px
+  &__wrap
+    max-width: 670px
+    margin: -22px auto 0
+    +d
+      max-width: 490px
+      margin-top: -10px
+    +t
+      max-width: 430px
+    +m
+      max-width: 100% 
+      margin: 0 0 42px 
+  &__title
+    margin-bottom: 48px
+    +d
+      margin-bottom: 44px
+      font-size: 42px
+      line-height: (56/42) 
+    +t
+      font-size: 36px
+    +m
+      margin-bottom: 32px
+      font-size: 42px
+      line-height: (56/42) 
+  &__info
+    color: $pink 
+    +d
+      font-size: 20px
+      line-height: 1.4
+    +m
+      font-size: 16px
+      line-height: (26/16) 
+  &__menu
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    +m
+      display: block
+      column-count: 2
+      padding-right: 100px
+  &__link
+    cursor: pointer
+    line-height: (26/18)
+    font-weight: 500
+    color: $wh   
+    transition: opacity .25s
+    +d
+      font-size: 14px
+    +m
+      display: block
+    &:hover
+      opacity: .3 
+    +nl
+      margin-bottom: 23px
+      +d
+        margin-bottom: 20px
+  &__bottom
+    display: flex
+    align-items: center
+    margin: 0 -67px 
+    padding: 45px 67px 58px
+    border-top: 1px solid rgba(#D8D8D8, .2) 
+    font-size: 16px
+    line-height: 1.5
+    font-weight: 500
+    +d
+      padding: 32px 0 42px 
+      font-size: 14px
+    +mac
+      margin: 0
+      padding: 45px 0 58px
+    +m
+      padding: 0
+      border: none 
+  &__copyright
+    margin-right: auto
+  &__scroll
+    cursor: pointer
+    color: $wh 
+    transition: opacity .25s
+    +m
+      display: none
+    &:hover
+      opacity: .85  
+  &__preview
+    position: absolute
+    font-size: 0
+    pointer-events: none
+    &:first-child
+      top: -155px
+      left: calc(50% - 536px) 
+      width: 330px
+      +d
+        top: -105px
+        left: calc(50% - 355px)
+        width: 250px
+      +m
+        display: none
+    &:nth-child(2)
+      top: 233px
+      right: calc(50% - 237px)
+      width: 150px
+      +d
+        top: 174px
+        right: calc(50% - 163px)
+        width: 83px
+      +a
+        top: 300px
+        right: 50px
+        width: 150px
+  &__preview &__pic
+    width: 100% 

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import {
-  // workCube,
+  workCube,
   workCube1,
   workCube2,
   workCube3,
@@ -16,18 +16,9 @@ export const WorkCubes = () => {
 
   return (
     <>
-      {/* <div className='work__preview'>
-        <img
-          className='work__pic'
-          src={workCube}
-          alt='cube'
-          style={{
-            willChange: 'transform',
-            transform: `translate3d(0px,${offsetY * 0.1}px, 0px)`,
-            transition: 'transform 0.5s cubic-bezier(0, 0, 0, 1) 0s'
-          }}
-        />
-      </div> */}
+      <div className='work__preview'>
+        <img className='work__cube' src={workCube} alt='cube' />
+      </div>
       <div className='work__figures'>
         <div className='work__figure'>
           <img

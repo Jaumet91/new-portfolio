@@ -5,7 +5,7 @@ import { scroll } from '../../assets/images';
 
 export const Works = () => {
   return (
-    <article className='work'>
+    <article className='work' id='work'>
       <div className='work__circles'></div>
       <section className='work__center center'>
         <div className='work__wrap'>

@@ -133,7 +133,7 @@ export const Contacts = () => {
               data-aos-delay='150'>
               <a
                 className='contacts__link'
-                href='https://www.linkedin.com/in/jaimecortes91/'
+                href='https://github.com/Jaumet91'
                 target='_blank'
                 rel='noreferrer'>
                 <Github className='icon' height={'20'} width={'20'} />

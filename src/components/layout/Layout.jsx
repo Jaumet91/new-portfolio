@@ -9,7 +9,7 @@ import { Portfolio } from '../Portfolio';
 export const Layout = ({ children }) => {
   return (
     <div className='page'>
-      <header className='header'>
+      <header className='header' id='header'>
         <Navbar />
         <Hero />
       </header>
