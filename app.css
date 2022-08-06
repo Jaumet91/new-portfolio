@@ -2101,6 +2101,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 }
 .cases__link {
   position: relative;
+  cursor: pointer;
   padding-bottom: 10px;
   font-size: 16px;
   line-height: 1.5;

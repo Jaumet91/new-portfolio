@@ -27,8 +27,10 @@ export const PortfolioItem = ({
         <h4 className='cases__info h4'>{title}</h4>
         <div className='cases__text'>{description}</div>
         <div className='cases__tags'>
-          {tags.map(tag => `${tag} - `).splice(0, tags.length - 1)}
-          {tags.pop()}
+          {(
+            tags.map(tag => `${tag} - `).splice(0, tags.length - 1) +
+            tags[tags.length - 1]
+          ).split(',')}
         </div>
       </div>
     </a>

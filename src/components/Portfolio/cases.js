@@ -7,6 +7,7 @@ export const cases = [
     title: 'FilmHub buscador de peliculas',
     description:
       'Encuentra tus películas favoritas y guárdalas en tu página de usuario para no perderte ni una!',
+    filter: ['React', 'Todos'],
     tags: ['React', 'ReduxTK', 'MUI', 'Alan AI'],
     url: 'https://filmhubjcf.netlify.app/'
   },
@@ -16,6 +17,7 @@ export const cases = [
     title: 'CryptoHue NFT Marketplace',
     description:
       'Marketplace de NFTs funcional desplegado en la testnet de Goerli',
+    filter: ['Web3.0', 'NextJS', 'Todos'],
     tags: ['Web3.0', 'NextJS', 'TypeScript', 'Solidity'],
     url: 'https://nft-marketplace-jaumet91.vercel.app/'
   },
@@ -25,7 +27,8 @@ export const cases = [
     title: 'Krypt seguimiento de transacciones',
     description:
       'Lleva el control de tus transacciones con un toque divertido, desplegado en la testnet de Ropsten',
-    tags: ['Web3.0', 'React', 'TailwindCSS'],
+    filter: ['Web3.0', 'React', 'Todos'],
+    tags: ['Web3.0', 'React', 'TailwindCSS', 'Solidity'],
     url: 'https://kryptwallettrack.netlify.app'
   },
   {
@@ -34,6 +37,7 @@ export const cases = [
     title: 'Journal App blog de notas en la nube',
     description:
       'Crea y almacena tus notas de forma privada en el nube de Firebase',
+    filter: ['React', 'Todos'],
     tags: ['React', 'MERN', 'Firebase', 'Jest', 'Cloudinary'],
     url: 'https://journalappfirebase.netlify.app/'
   }
