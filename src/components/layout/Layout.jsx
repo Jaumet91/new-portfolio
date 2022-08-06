@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Footer } from '../Footer';
 import { Hero } from '../Hero';
 import { Navbar } from '../Navbar';
+import { Contacts } from '../Contacts';
+import { Portfolio } from '../Portfolio';
 
 export const Layout = ({ children }) => {
   return (
@@ -12,7 +14,13 @@ export const Layout = ({ children }) => {
         <Hero />
       </header>
       <main>{children}</main>
-      <Footer />
+      <div className='wrapper wrapper_gradient'>
+        <Portfolio />
+        <div className='wrapper wrapper_dark'>
+          <Contacts />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };
