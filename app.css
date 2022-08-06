@@ -1958,7 +1958,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
   width: 67%;
 }
 .work__figure:nth-child(7) {
-  top: 35%;
+  top: 45%;
   left: 31.3%;
   z-index: 4;
   width: 66%;
@@ -1970,7 +1970,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 }
 @media only screen and (max-width: 639px) {
   .work__figure:nth-child(7) {
-    top: 40%;
+    top: 45%;
   }
 }
 .work__figure:not(:first-child) {
@@ -2079,21 +2079,23 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 }
 .cases__title {
   margin-bottom: 80px;
-  display: flex;
-  margin-bottom: 88px;
 }
 @media only screen and (max-width: 1279px) {
   .cases__title {
     margin-bottom: 32px;
   }
 }
+.cases__nav {
+  display: flex;
+  margin-bottom: 88px;
+}
 @media only screen and (max-width: 1279px) {
-  .cases__title {
+  .cases__nav {
     margin-bottom: 48px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .cases__title {
+  .cases__nav {
     display: none;
   }
 }
@@ -2144,6 +2146,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 .cases__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: -32px -16px 0;
 }
 @media only screen and (max-width: 1279px) {
@@ -2162,6 +2165,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
   position: relative;
   display: block;
   background: #fff;
+  margin: 32px 12px 0;
   border-radius: 24px;
 }
 @media only screen and (max-width: 1279px) {
@@ -2214,14 +2218,10 @@ body:not(.touch-device) .owl-item:hover .details__preview {
   display: flex;
   flex-direction: column;
   flex: 0 0 calc(50% - 32px);
-  width: calc(50% - 32px);
-  margin: 32px 16px 0;
 }
 @media only screen and (max-width: 1279px) {
   .cases__list .cases__item {
     flex: 0 0 calc(50% - 24px);
-    width: calc(50% - 24px);
-    margin: 24px 12px 0;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -2308,6 +2308,11 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 }
 .cases__text {
   color: #6b6b6b;
+}
+.cases__tags {
+  font-size: 14px;
+  color: #4C40F7;
+  margin-top: 5px;
 }
 .cases__figure {
   position: absolute;

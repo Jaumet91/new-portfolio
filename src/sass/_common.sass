@@ -1259,11 +1259,11 @@ body:not(.touch-device) .owl-item:hover .details__preview
       z-index: 3
       width: 67%
     &:nth-child(7)
-      top: 35%
+      top: 45%
       +d
         top: 50%
       +a
-        top: 40%
+        top: 45%
       left: 31.3%
       z-index: 4
       width: 66%
@@ -1337,7 +1337,7 @@ body:not(.touch-device) .owl-item:hover .details__preview
     margin-bottom: 80px
     +d
       margin-bottom: 32px
-    &__nav
+  &__nav
     display: flex
     margin-bottom: 88px
     +d
@@ -1379,6 +1379,7 @@ body:not(.touch-device) .owl-item:hover .details__preview
   &__list
     display: flex
     flex-wrap: wrap
+    justify-content: space-between
     margin: -32px -16px 0
     +d
       margin: -24px -12px 0
@@ -1390,6 +1391,7 @@ body:not(.touch-device) .owl-item:hover .details__preview
     position: relative
     display: block
     background: $wh
+    margin: 32px 12px 0
     border-radius: 24px 
     +d
       border-radius: 17px
@@ -1428,12 +1430,12 @@ body:not(.touch-device) .owl-item:hover .details__preview
     display: flex
     flex-direction: column
     flex: 0 0 calc(50% - 32px)
-    width: calc(50% - 32px)
-    margin: 32px 16px 0  
+    // width: calc(50% - 32px)
+    // margin: 32px 16px 0  
     +d
       flex: 0 0 calc(50% - 24px)
-      width: calc(50% - 24px)
-      margin: 24px 12px 0
+      // width: calc(50% - 24px)
+      // margin: 24px 12px 0
     +m
       width: 100%
       margin: 0 
@@ -1490,6 +1492,10 @@ body:not(.touch-device) .owl-item:hover .details__preview
       margin-bottom: 4px
   &__text
     color: $gray-text 
+  &__tags
+    font-size: 14px
+    color: $purple
+    margin-top: 5px
   &__figure
     position: absolute
     font-size: 0

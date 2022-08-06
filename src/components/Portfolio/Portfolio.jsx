@@ -1,23 +1,15 @@
-import { PortfolioItem } from './PortfolioItem';
-import {
-  cases1,
-  cases2,
-  cases3,
-  cases4,
-  cases5,
-  cases6
-} from '../../assets/images';
+import { useWindowDimensions } from '../../hooks/useWindowDimensions';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-const cases = [
-  { url: cases1, delay: '' },
-  { url: cases2, delay: '200' },
-  { url: cases3, delay: '' },
-  { url: cases4, delay: '200' },
-  { url: cases5, delay: '' },
-  { url: cases6, delay: '200' }
-];
+import { owlSliderPortfolio } from '../../helpers/owlConfig';
+import { PortfolioItem } from './PortfolioItem';
+import { cases } from './';
 
 export const Portfolio = () => {
+  const { width } = useWindowDimensions();
+
   return (
     <article className='cases cases_main' id='portfolio'>
       <section className='cases__center center'>
@@ -44,10 +36,34 @@ export const Portfolio = () => {
             NextJS
           </a>
         </div>
-        <div className='cases__list'>
-          {cases.map(({ url, delay }) => (
-            <PortfolioItem key={url} url={url} delay={delay} />
-          ))}
+        <div className='cases__list' id='slider'>
+          {width < 767 ? (
+            <OwlCarousel {...owlSliderPortfolio}>
+              {cases.map(({ image, delay, title, description, tags, url }) => (
+                <PortfolioItem
+                  key={image}
+                  image={image}
+                  delay={delay}
+                  title={title}
+                  description={description}
+                  tags={tags}
+                  url={url}
+                />
+              ))}
+            </OwlCarousel>
+          ) : (
+            cases.map(({ image, delay, title, description, tags, url }) => (
+              <PortfolioItem
+                key={image}
+                image={image}
+                delay={delay}
+                title={title}
+                description={description}
+                tags={tags}
+                url={url}
+              />
+            ))
+          )}
         </div>
       </section>
     </article>

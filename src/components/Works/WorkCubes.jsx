@@ -103,7 +103,7 @@ export const WorkCubes = () => {
             alt='cube7'
             style={{
               willChange: 'transform',
-              transform: `translate3d(0px,${offsetY * 0.15 - 400}px, 0px)`,
+              transform: `translate3d(0px,${offsetY * 0.12 - 400}px, 0px)`,
               transition: 'transform 0.5s cubic-bezier(0, 0, 0, 1) 0s'
             }}
           />
