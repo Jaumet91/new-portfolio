@@ -6,7 +6,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 import { owlSliderPortfolio } from '../../helpers/owlConfig';
 import { PortfolioItem } from './PortfolioItem';
-import { cases } from './';
+import { cases, Figures } from './';
 
 export const Portfolio = () => {
   const [projects, setProjects] = useState(cases);
@@ -89,6 +89,7 @@ export const Portfolio = () => {
           )}
         </div>
       </section>
+      <Figures />
     </article>
   );
 };
