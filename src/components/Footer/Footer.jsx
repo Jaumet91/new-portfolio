@@ -17,16 +17,18 @@ export const Footer = () => {
           </Link>
           <div className='footer__wrap'>
             <h1 className='footer__title h1'>
-              You only have one chance to make a first impression.
+              La primera impresión es la más duradera.
             </h1>
-            <h2 className='footer__info h4'>make it an amazing one.</h2>
+            <h2 className='footer__info h4'>
+              Juntos haremos que sea increíble.
+            </h2>
           </div>
           <div className='footer__menu'>
             <Link
               className='footer__link'
               to='details'
               smooth={true}
-              offset={50}
+              offset={0}
               duration={1000}>
               Sobre mí
             </Link>
@@ -34,7 +36,7 @@ export const Footer = () => {
               className='footer__link'
               to='work'
               smooth={true}
-              offset={50}
+              offset={0}
               duration={1000}>
               Trabajo
             </Link>
@@ -42,7 +44,7 @@ export const Footer = () => {
               className='footer__link'
               to='portfolio'
               smooth={true}
-              offset={50}
+              offset={0}
               duration={1000}>
               Portfolio
             </Link>

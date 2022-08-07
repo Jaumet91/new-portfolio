@@ -4,7 +4,7 @@ import {
   Phone,
   Send,
   Profile,
-  Arrows,
+  // Arrows,
   Message,
   ArrowRight,
   LinkedIn,
@@ -19,17 +19,17 @@ export const Contacts = () => {
         <div className='contacts__container'>
           <div className='contacts__wrap'>
             <div className='contacts__stage stage' data-aos='animation-scale-y'>
-              Say hello!
+              Salúdame!
             </div>
             <h1 className='contacts__title h1' data-aos='animation-scale-y'>
-              Lets work <br /> Together.
+              Trabajemos <br /> Juntos.
             </h1>
             <div
               className='contacts__info'
               data-aos='animation-scale-y'
               data-aos-delay='400'>
-              to meet up with you to discuss your venture, and potential
-              collaborations.
+              Hagamos realidad tus ideas de negocio y destaca en el entorno
+              digital.
             </div>
           </div>
           <div className='contacts__row'>
@@ -65,7 +65,7 @@ export const Contacts = () => {
                     className='field__input'
                     type='text'
                     name='name'
-                    placeholder='Name'
+                    placeholder='Nombre'
                   />
                   <div className='field__icon'>
                     <Profile className='icon' height={'20'} width={'20'} />
@@ -78,14 +78,14 @@ export const Contacts = () => {
                     className='field__input'
                     type='email'
                     name='email'
-                    placeholder='Email'
+                    placeholder='Correo'
                   />
                   <div className='field__icon'>
                     <Send className='icon' height={'20'} width={'20'} />
                   </div>
                 </div>
               </div>
-              <div className='contacts__field field'>
+              {/* <div className='contacts__field field'>
                 <div className='field__wrap'>
                   <select className='field__select' name='question'>
                     <option>Opcion 1</option>
@@ -95,13 +95,13 @@ export const Contacts = () => {
                     <Arrows className='icon' height={'20'} width={'20'} />
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className='contacts__field field'>
                 <div className='field__wrap'>
                   <textarea
                     className='field__textarea'
                     name='message'
-                    placeholder='Message'
+                    placeholder='Cuéntame tus ideas'
                   />
                   <div className='field__icon'>
                     <Message className='icon' height={'20'} width={'20'} />
@@ -110,7 +110,7 @@ export const Contacts = () => {
               </div>
               <div className='contacts__btn'>
                 <button className='btn btn_purple'>
-                  <span className='btn__text'>Lets talk</span>
+                  <span className='btn__text'>Hablemos</span>
                   <ArrowRight className='icon' height={'20'} width={'20'} />
                 </button>
               </div>

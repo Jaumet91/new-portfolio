@@ -3335,5 +3335,10 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 .footer__preview .footer__pic {
   width: 100%;
 }
+@media only screen and (max-width: 639px) {
+  .footer__preview .footer__pic {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */
