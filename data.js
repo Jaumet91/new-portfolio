@@ -2,19 +2,19 @@ export const data = {
   navLinks: [
     {
       name: 'Sobre mí',
-      url: '#about'
+      url: 'details'
     },
     {
       name: 'Trabajo',
-      url: '#work'
+      url: 'work'
     },
     {
       name: 'Portfolio',
-      url: '#portfolio'
+      url: 'portfolio'
     },
     {
       name: 'Contacto',
-      url: '#contact'
+      url: 'contacts'
     }
   ],
 
@@ -27,19 +27,19 @@ export const data = {
     },
     {
       category: 'A la vanguardia',
-      text: 'Tecnologías escalables que aportan un buen rendimiento y experiencias de usuario fluídas.',
+      text: 'Utilizo tecnologías escalables que aportan un buen rendimiento y experiencias de uso fluídas.',
       classProp: 'hand',
       aosDelay: '150'
     },
     {
       category: 'Tendencias de diseño',
-      text: 'Atención al detalle, las aplicaciones también tienen que ir a la moda!.',
+      text: 'Filosofía UX/UI, diseño de vanguardia dándo importancia a cada microinteracción.',
       classProp: 'color',
       aosDelay: '300'
     },
     {
       category: 'Responsive Design',
-      text: 'Todas las aplicaciones adaptadas para todo tipo de pantallas y dispositivos.',
+      text: 'Preferencia por Mobile First, las aplicaciones funcionarán en todo tipo de pantallas y dispositivos.',
       classProp: 'responsive',
       aosDelay: '0'
     }

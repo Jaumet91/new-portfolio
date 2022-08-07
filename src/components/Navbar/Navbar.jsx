@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 import { logo, logoWhite, bgHeader } from '../../assets/images';
 import { LinkedIn, Github, Phone, Place, Email } from '../icons';
@@ -19,7 +19,7 @@ export const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='navbar__center center'>
-        <Link to='/' className='navbar__logo'>
+        <Link to='header' className='navbar__logo'>
           <img className='navbar__pic' src={logo} />
         </Link>
         <div className='navbar__social navbar__social_nav'>
@@ -47,7 +47,7 @@ export const Navbar = () => {
 
       <div className={`navbar__wrapper ${isOpen ? 'visible' : ''}`}>
         <div className='navbar__preview'>
-          <Link to='/' className='navbar__logo'>
+          <Link to='header' className='navbar__logo'>
             <img className='navbar__pic' src={logoWhite} />
           </Link>
           <div className='navbar__img'>
@@ -79,9 +79,19 @@ export const Navbar = () => {
           </div>
           <nav className='navbar__nav'>
             {navLinks.map(({ name, url }) => (
-              <a key={name + url} className='navbar__item' href={url}>
+              <Link
+                key={name + url}
+                className='navbar__item'
+                to={url}
+                smooth={true}
+                offset={0}
+                duration={1000}
+                onClick={() => setIsOpen(false)}>
                 <span>{name}</span>
-              </a>
+              </Link>
+              /* <a key={name + url} className='navbar__item' href={url}>
+                <span>{name}</span>
+              </a> */
             ))}
           </nav>
           <div className='navbar__social navbar__social_inner'>

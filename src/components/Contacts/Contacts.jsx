@@ -3,7 +3,7 @@ import { Email, Place, Phone, LinkedIn, Github } from '../icons';
 
 export const Contacts = () => {
   return (
-    <article className='contacts'>
+    <article className='contacts' id='contacts'>
       <section className='contacts__center center'>
         <div className='contacts__container'>
           <div className='contacts__wrap'>
@@ -17,8 +17,7 @@ export const Contacts = () => {
               className='contacts__info'
               data-aos='animation-scale-y'
               data-aos-delay='400'>
-              Hagamos realidad tus ideas de negocio y destaca en el entorno
-              digital.
+              Haz realidad tus ideas de negocio y destaca en el entorno digital.
             </div>
           </div>
           <div className='contacts__row'>

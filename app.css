@@ -790,6 +790,7 @@ a.btn {
   }
 }
 .navbar__logo {
+  cursor: pointer;
   font-size: 0;
 }
 .navbar__logo .navbar__pic {
@@ -1142,6 +1143,7 @@ a.btn {
   margin-top: -15px;
 }
 .navbar__item {
+  cursor: pointer;
   overflow: hidden;
   font-size: 72px;
   line-height: 1.1666666667;

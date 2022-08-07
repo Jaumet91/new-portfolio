@@ -27,10 +27,13 @@ export const Details = () => {
           Sueña ideas. <br /> Créalas.
         </h3>
         <div className='details__btn' data-aos='animation-translate-y'>
-          <button className='btn btn_purple'>
-            <span className='btn__text'>Escríbeme!</span>
-            <ArrowRight className='icon' height={'17'} width={'17'} />
-          </button>
+          <Link to='contacts' smooth={true} offset={-10} duration={1000}>
+            <button className='btn btn_purple'>
+              <span className='btn__text'>Escríbeme!</span>
+              <ArrowRight className='icon' height={'17'} width={'17'} />
+            </button>
+          </Link>
+          {/* <span className='btn__text'>Escríbeme!</span> */}
         </div>
         <div className='details__container'>
           <OwlCarousel {...owlSliderDetails}>
@@ -50,10 +53,10 @@ export const Details = () => {
       <Figures />
       <Link
         className='details__contact'
-        to='contact'
+        to='contacts'
         data-aos='transform'
         smooth={true}
-        offset={50}
+        offset={-10}
         duration={1000}>
         Contacta conmigo
       </Link>

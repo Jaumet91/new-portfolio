@@ -30,12 +30,12 @@ export const Works = () => {
             to='portfolio'
             data-aos='transform'
             smooth={true}
-            offset={50}
+            offset={0}
             duration={1000}>
             <div className='scroll__icon'>
               <img className='scroll__pic' src={scroll} alt='scroll' />
             </div>
-            <div className='scroll__text'>Portfolio</div>
+            <div className='scroll__text'>Ver el Portfolio</div>
           </Link>
         </div>
       </section>
