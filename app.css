@@ -1005,7 +1005,8 @@ a.btn {
     visibility: visible;
     opacity: 1;
     transform: translateX(100%);
-    background: #fff url("src//assets/images/bg-header-mobile.png") no-repeat 100% 150%/100% auto;
+    background: #fff no-repeat 100% 150%/100% auto;
+    background-image: url("src/assets/bg-header-mobile.png");
   }
 }
 .navbar__wrapper.visible {
@@ -3179,7 +3180,8 @@ body:not(.touch-device) .owl-item:hover .details__preview {
   .footer {
     position: relative;
     padding: 56px 0 60px;
-    background: #00113B url("src/assets/images/bg-footer.png") no-repeat 100% 100%/100% auto;
+    background: #00113B no-repeat 100% 100%/100% auto;
+    background-image: url("src/assets/bg-footer.png");
   }
   .footer:before, .footer:after {
     content: "";
