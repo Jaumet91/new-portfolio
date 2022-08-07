@@ -1249,7 +1249,7 @@ a.btn {
     opacity: 1;
     transform: translateX(100%);
     background: #fff no-repeat 100% 150%/100% auto;
-    background-image: url("/bg-header-mobile.png");
+    background-image: url("assets/bg-header-mobile.png");
   }
 }
 .navbar__wrapper.visible {
@@ -3415,7 +3415,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
     position: relative;
     padding: 56px 0 60px;
     background: #00113B no-repeat 100% 100%/100% auto;
-    background-image: url("/src/assets/bg-footer.png");
+    background-image: url("assets/bg-footer.png");
   }
   .footer:before, .footer:after {
     content: "";
