@@ -12,8 +12,8 @@ const validate = Yup.object({
     .email('Por favor escribe un correo válido')
     .required('Por favor introduce un correo'),
   message: Yup.string()
-    .min(30, 'Por favor necesitaría más información')
-    .required('Dime cómo puedo auyudarte')
+    .min(30, 'Prueba a contarme un poco más sobre ti!')
+    .required('Dime cómo puedo ayudarte')
 });
 
 export const ContactForm = () => {

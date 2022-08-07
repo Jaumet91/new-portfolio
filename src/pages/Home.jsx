@@ -1,10 +1,12 @@
+import { Details } from '../components/Details';
 import { Layout } from '../components/layout';
-import { PageHome } from '../components/PageHome';
+import { Works } from '../components/Works';
 
 export const Home = () => {
   return (
     <Layout>
-      <PageHome />
+      <Details />
+      <Works />
     </Layout>
   );
 };
