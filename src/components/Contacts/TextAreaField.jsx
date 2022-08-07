@@ -27,8 +27,8 @@ export const TextAreaField = ({ label, ...props }) => {
         <div className='field__icon'>
           <Message
             className={`${meta.touched && meta.error ? 'icon_error' : 'icon'}`}
-            height={'20'}
-            width={'20'}
+            height={'16'}
+            width={'16'}
           />
         </div>
       </div>

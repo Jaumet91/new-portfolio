@@ -30,16 +30,16 @@ export const InputField = ({ label, ...props }) => {
               className={`${
                 meta.touched && meta.error ? 'icon_error' : 'icon'
               }`}
-              height={'20'}
-              width={'20'}
+              height={'16'}
+              width={'16'}
             />
           ) : (
             <Profile
               className={`${
                 meta.touched && meta.error ? 'icon_error' : 'icon'
               }`}
-              height={'20'}
-              width={'20'}
+              height={'16'}
+              width={'16'}
             />
           )}
         </div>

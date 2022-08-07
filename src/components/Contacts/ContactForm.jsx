@@ -1,19 +1,45 @@
+import { useState } from 'react';
+import axios from 'axios';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
 import { InputField, TextAreaField } from './';
 import { ArrowRight } from '../icons';
 
+const validate = Yup.object({
+  name: Yup.string().required('Por favor escribe tu nombre'),
+  email: Yup.string()
+    .email('Por favor escribe un correo válido')
+    .required('Por favor introduce un correo'),
+  message: Yup.string()
+    .min(30, 'Por favor necesitaría más información')
+    .required('Dime cómo puedo auyudarte')
+});
+
 export const ContactForm = () => {
-  const validate = Yup.object({
-    name: Yup.string().required('Por favor escribe tu nombre'),
-    email: Yup.string()
-      .email('Por favor escribe un correo válido')
-      .required('Por favor introduce un correo'),
-    message: Yup.string()
-      .min(30, 'Por favor necesitaría más información')
-      .required('Dime cómo puedo auyudarte')
-  });
+  const [serverState, setServerState] = useState();
+
+  const handleServerResponse = (ok, msg) => {
+    setServerState({ ok, msg });
+  };
+
+  const handleOnSubmit = (values, actions) => {
+    axios({
+      method: 'POST',
+      url: 'https://formspree.io/f/xnqrayez',
+      data: values
+    })
+      .then(response => {
+        actions.setSubmitting(false);
+        actions.resetForm();
+        handleServerResponse(true, 'Formulario enviado, Gracias!');
+      })
+      .catch(error => {
+        actions.setSubmitting(false);
+        handleServerResponse(false, error.response.data.error);
+      });
+  };
+
   return (
     <Formik
       initialValues={{
@@ -22,10 +48,8 @@ export const ContactForm = () => {
         message: ''
       }}
       validationSchema={validate}
-      onSubmit={values => {
-        console.log(values);
-      }}>
-      {formik => (
+      onSubmit={handleOnSubmit}>
+      {({ isSubmitting }) => (
         <Form
           // onSubmit={formik.handleSubmit}
           className='contacts__form'
@@ -66,14 +90,28 @@ export const ContactForm = () => {
             />
           </div>
           <div className='contacts__btn'>
-            <button
-              className='btn btn_purple'
-              type='submit'
-              disabled={formik.isSubmitting}>
-              <span className='btn__text'>Hablemos</span>
-              <ArrowRight className='icon' height={'20'} width={'20'} />
-            </button>
+            {isSubmitting ? (
+              <div className='loader'>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            ) : (
+              <button
+                className='btn btn_purple'
+                type='submit'
+                disabled={isSubmitting}>
+                <span className='btn__text'>Enviar</span>
+                <ArrowRight className='icon' height={'20'} width={'20'} />
+              </button>
+            )}
           </div>
+          {serverState && (
+            <p className={!serverState.ok ? 'errorMsg' : 'okMsg'}>
+              {serverState.msg}
+            </p>
+          )}
         </Form>
       )}
     </Formik>
