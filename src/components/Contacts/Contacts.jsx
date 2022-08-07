@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 import {
   Email,
@@ -20,6 +21,15 @@ export const Contacts = () => {
       name: '',
       email: '',
       message: ''
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required(true),
+      email: Yup.string().email(true),
+      message: Yup.string().required(true)
+    }),
+    onSubmit: () => formValue => {
+      console.log('Formulario enviado');
+      console.log(formValue);
     }
   });
 
@@ -76,7 +86,9 @@ export const Contacts = () => {
                     className='field__input'
                     type='text'
                     name='name'
+                    onChange={formik.handleChange}
                     value={formik.values.name}
+                    error={formik.errors.name}
                     placeholder='Nombre'
                   />
                   <div className='field__icon'>
@@ -90,7 +102,9 @@ export const Contacts = () => {
                     className='field__input'
                     type='email'
                     name='email'
+                    onChange={formik.handleChange}
                     value={formik.values.email}
+                    error={formik.errors.email}
                     placeholder='Correo'
                   />
                   <div className='field__icon'>
@@ -114,7 +128,9 @@ export const Contacts = () => {
                   <textarea
                     className='field__textarea'
                     name='message'
+                    onChange={formik.handleChange}
                     value={formik.values.message}
+                    error={formik.errors.message}
                     placeholder='Cuéntame tus ideas'
                   />
                   <div className='field__icon'>
@@ -123,7 +139,10 @@ export const Contacts = () => {
                 </div>
               </div>
               <div className='contacts__btn'>
-                <button className='btn btn_purple'>
+                <button
+                  className='btn btn_purple'
+                  type='submit'
+                  disabled={formik.isSubmitting}>
                   <span className='btn__text'>Hablemos</span>
                   <ArrowRight className='icon' height={'20'} width={'20'} />
                 </button>
