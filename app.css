@@ -2506,6 +2506,9 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 .field__input:focus + .field__icon .icon, .field__textarea:focus + .field__icon .icon, .field__select:focus + .field__icon .icon {
   fill: #4C40F7;
 }
+.field__icon .icon_error {
+  fill: red;
+}
 .field__input, .field__select {
   height: 72px;
   padding: 0 72px 0 24px;
@@ -2515,6 +2518,16 @@ body:not(.touch-device) .owl-item:hover .details__preview {
     height: 56px;
     padding-right: 56px;
   }
+}
+.field__input_error {
+  font-size: 14px;
+  color: red;
+}
+.field__is_invalid {
+  border-color: red;
+}
+.field__is_invalid:focus {
+  border-color: red;
 }
 .field__textarea {
   height: 200px;
@@ -2741,30 +2754,6 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 }
 .contacts__icon .icon {
   fill: #4C40F7;
-}
-.contacts__icon .icon-email {
-  font-size: 20px;
-}
-@media only screen and (max-width: 1279px) {
-  .contacts__icon .icon-email {
-    font-size: 14px;
-  }
-}
-.contacts__icon .icon-place {
-  font-size: 23px;
-}
-@media only screen and (max-width: 1279px) {
-  .contacts__icon .icon-place {
-    font-size: 17px;
-  }
-}
-.contacts__icon .icon-phone {
-  font-size: 24px;
-}
-@media only screen and (max-width: 1279px) {
-  .contacts__icon .icon-phone {
-    font-size: 18px;
-  }
 }
 .contacts__form {
   flex-shrink: 0;

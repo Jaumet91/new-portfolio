@@ -23,6 +23,8 @@
   &__textarea:focus + &__icon .icon,
   &__select:focus + &__icon .icon
     fill: $purple
+  &__icon .icon_error
+    fill: red
   &__input,
   &__select
     height: 72px
@@ -30,6 +32,13 @@
     +d
       height: 56px
       padding-right: 56px
+  &__input_error
+    font-size: 14px
+    color: red
+  &__is_invalid
+    border-color: red
+    &:focus
+      border-color: red
   &__textarea
     height: 200px
     resize: none 
@@ -173,18 +182,6 @@
       height: 28px
     .icon
       fill: $purple
-      &-email
-        font-size: 20px
-        +d
-          font-size: 14px
-      &-place
-        font-size: 23px
-        +d
-          font-size: 17px
-      &-phone
-        font-size: 24px
-        +d
-          font-size: 18px
   &__form
     flex-shrink: 0
     width: 468px 

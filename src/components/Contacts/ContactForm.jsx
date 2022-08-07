@@ -1,13 +1,19 @@
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
-import { Message, Send, Profile, ArrowRight } from '../icons';
+import { InputField, TextAreaField } from './';
+import { ArrowRight } from '../icons';
 
 export const ContactForm = () => {
   const validate = Yup.object({
-    name: Yup.string().required('Required')
+    name: Yup.string().required('Por favor escribe tu nombre'),
+    email: Yup.string()
+      .email('Por favor escribe un correo válido')
+      .required('Por favor introduce un correo'),
+    message: Yup.string()
+      .min(30, 'Por favor necesitaría más información')
+      .required('Dime cómo puedo auyudarte')
   });
-
   return (
     <Formik
       initialValues={{
@@ -26,43 +32,20 @@ export const ContactForm = () => {
           data-aos='animation-translate-y'
           data-aos-delay='200'>
           <div className='contacts__field field'>
-            <label className='screen-reader-text' htmlFor='name'>
-              name
-            </label>
-            <div className='field__wrap'>
-              <input
-                className='field__input'
-                type='text'
-                name='name'
-                id='name'
-                onChange={formik.handleChange}
-                value={formik.values.name}
-                error={formik.errors.name}
-                placeholder='Nombre'
-              />
-              <div className='field__icon'>
-                <Profile className='icon' height={'20'} width={'20'} />
-              </div>
-            </div>
+            <InputField
+              label='name'
+              type='text'
+              name='name'
+              placeholder='Nombre'
+            />
           </div>
           <div className='contacts__field field'>
-            <label className='screen-reader-text' htmlFor='email'>
-              email
-            </label>
-            <div className='field__wrap'>
-              <input
-                className='field__input'
-                type='email'
-                name='email'
-                id='email'
-                onChange={formik.handleChange}
-                value={formik.values.email}
-                placeholder='Correo'
-              />
-              <div className='field__icon'>
-                <Send className='icon' height={'20'} width={'20'} />
-              </div>
-            </div>
+            <InputField
+              label='email'
+              type='email'
+              name='email'
+              placeholder='Correo'
+            />
           </div>
           {/* <div className='contacts__field field'>
                 <div className='field__wrap'>
@@ -76,22 +59,11 @@ export const ContactForm = () => {
                 </div>
               </div> */}
           <div className='contacts__field field'>
-            <label className='screen-reader-text' htmlFor='message'>
-              message
-            </label>
-            <div className='field__wrap'>
-              <textarea
-                className='field__textarea'
-                name='message'
-                id='message'
-                onChange={formik.handleChange}
-                value={formik.values.message}
-                placeholder='Cuéntame tus ideas'
-              />
-              <div className='field__icon'>
-                <Message className='icon' height={'20'} width={'20'} />
-              </div>
-            </div>
+            <TextAreaField
+              label='message'
+              name='message'
+              placeholder='Cuéntame tus ideas'
+            />
           </div>
           <div className='contacts__btn'>
             <button
