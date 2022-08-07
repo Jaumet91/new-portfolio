@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "lint": "eslint --fix . --ext .js,.jsx"
+    "lint": "eslint --fix . --ext .js,.jsx",
+    "sass": "sass --watch src/sass/app.sass src/sass/app.css"
   },
   "dependencies": {
     "aos": "^2.3.4",
