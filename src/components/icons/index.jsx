@@ -8,3 +8,4 @@ export * from './send';
 export * from './profile';
 export * from './arrows';
 export * from './message';
+export * from './octagonCheck';

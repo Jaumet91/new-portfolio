@@ -4,7 +4,7 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
 import { InputField, TextAreaField } from './';
-import { ArrowRight } from '../icons';
+import { ArrowRight, OctagonCheck } from '../icons';
 
 const validate = Yup.object({
   name: Yup.string().required('Por favor escribe tu nombre'),
@@ -110,6 +110,7 @@ export const ContactForm = () => {
           {serverState && (
             <p className={!serverState.ok ? 'errorMsg' : 'okMsg'}>
               {serverState.msg}
+              <OctagonCheck className='icon check' height={'23'} width={'23'} />
             </p>
           )}
         </Form>

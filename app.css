@@ -3133,8 +3133,15 @@ body:not(.touch-device) .owl-item:hover .details__preview {
 }
 
 .okMsg {
+  display: flex;
+  justify-items: center;
   margin-top: 10px;
-  color: #6b6b6b;
+  color: green;
+}
+
+.check {
+  margin-left: 10px;
+  fill: green;
 }
 
 @keyframes lds-ellipsis1 {
