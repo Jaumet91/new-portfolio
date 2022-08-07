@@ -1,3 +1,5 @@
+import { useFormik } from 'formik';
+
 import {
   Email,
   Place,
@@ -13,6 +15,14 @@ import {
 import { Figures } from './';
 
 export const Contacts = () => {
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: ''
+    }
+  });
+
   return (
     <article className='contacts'>
       <section className='contacts__center center'>
@@ -56,6 +66,7 @@ export const Contacts = () => {
               </a>
             </div>
             <form
+              onSubmit={formik.handleSubmit}
               className='contacts__form'
               data-aos='animation-translate-y'
               data-aos-delay='200'>
@@ -65,6 +76,7 @@ export const Contacts = () => {
                     className='field__input'
                     type='text'
                     name='name'
+                    value={formik.values.name}
                     placeholder='Nombre'
                   />
                   <div className='field__icon'>
@@ -78,6 +90,7 @@ export const Contacts = () => {
                     className='field__input'
                     type='email'
                     name='email'
+                    value={formik.values.email}
                     placeholder='Correo'
                   />
                   <div className='field__icon'>
@@ -101,6 +114,7 @@ export const Contacts = () => {
                   <textarea
                     className='field__textarea'
                     name='message'
+                    value={formik.values.message}
                     placeholder='Cuéntame tus ideas'
                   />
                   <div className='field__icon'>
