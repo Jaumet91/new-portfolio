@@ -30,14 +30,10 @@ export const owlSliderDetails = {
 };
 
 export const owlSliderPortfolio = {
-  nav: false,
-  navElement: 'button',
+  items: 1,
+  dots: true,
   loop: true,
-  smartSpeed: 700,
-  responsive: {
-    320: {
-      dots: true,
-      items: 1
-    }
-  }
+  autoplay: false,
+  autoplayTimeout: 5000,
+  mouseDrag: false
 };
